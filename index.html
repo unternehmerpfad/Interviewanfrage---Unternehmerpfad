@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Vorbereitung auf dein Interview mit Unternehmerpfad">
+  <title>Interview-Vorbereitung | Unternehmerpfad</title>
+  <style>
+    html, body { min-height: 100%; margin: 0; background: #f3f6f4; }
+    body { padding: clamp(.35rem, 2vw, 1.5rem); }
+  </style>
+</head>
+<body>
+<section id="unternehmer-vorabcheck" aria-label="Unternehmerpfad Vorab-Check">
+  <style>
+    #unternehmer-vorabcheck {
+      --up-gap: 1rem;
+      --background: #f3f6f4;
+      --foreground: #17211d;
+      --card: #ffffff;
+      --card-foreground: #17211d;
+      --primary: #013328;
+      --primary-foreground: #ffffff;
+      --muted: #e8eeeb;
+      --muted-foreground: #52615a;
+      --accent: #dcebe5;
+      --accent-foreground: #123c32;
+      --destructive: #b42318;
+      --border: #d2ddd7;
+      --input: #b9c8c1;
+      --ring: #1f6a57;
+      --viz-series-1: #1f6a57;
+      color: var(--foreground);
+      background: var(--background);
+      line-height: 1.55;
+      width: 100%;
+      min-height: 100%;
+      padding: clamp(.75rem, 3vw, 2rem);
+      border-radius: 1rem;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    #unternehmer-vorabcheck * {
+      box-sizing: border-box;
+    }
+
+    #unternehmer-vorabcheck .up-shell {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    #unternehmer-vorabcheck .up-brand-row,
+    #unternehmer-vorabcheck .up-progress-row,
+    #unternehmer-vorabcheck .up-actions,
+    #unternehmer-vorabcheck .up-inline,
+    #unternehmer-vorabcheck .up-review-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+
+    #unternehmer-vorabcheck .up-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .65rem;
+      min-height: 4.25rem;
+      padding: .45rem .9rem .45rem .55rem;
+      border-radius: .85rem;
+      color: var(--primary-foreground);
+      background: var(--primary);
+      font-weight: 500;
+      letter-spacing: .06em;
+    }
+
+    #unternehmer-vorabcheck .up-brand-logo {
+      display: block;
+      width: 3.4rem;
+      height: 3.4rem;
+      object-fit: contain;
+    }
+
+    #unternehmer-vorabcheck .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.75rem;
+      padding: .65rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: .6rem;
+      color: var(--foreground);
+      background: var(--background);
+      font: inherit;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    #unternehmer-vorabcheck .btn:hover {
+      background: var(--accent);
+      color: var(--accent-foreground);
+    }
+
+    #unternehmer-vorabcheck .btn:focus-visible,
+    #unternehmer-vorabcheck .form-control:focus-visible,
+    #unternehmer-vorabcheck .form-select:focus-visible,
+    #unternehmer-vorabcheck .form-check-input:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--ring) 40%, transparent);
+      outline-offset: 2px;
+    }
+
+    #unternehmer-vorabcheck .btn-primary {
+      border-color: var(--primary);
+      color: var(--primary-foreground);
+      background: var(--primary);
+    }
+
+    #unternehmer-vorabcheck .btn-primary:hover {
+      color: var(--primary-foreground);
+      background: color-mix(in srgb, var(--primary) 88%, var(--foreground));
+    }
+
+    #unternehmer-vorabcheck .btn-ghost {
+      background: transparent;
+    }
+
+    #unternehmer-vorabcheck .btn:disabled {
+      cursor: wait;
+      opacity: .65;
+    }
+
+    #unternehmer-vorabcheck .form-control,
+    #unternehmer-vorabcheck .form-select {
+      width: 100%;
+      min-height: 2.75rem;
+      padding: .7rem .8rem;
+      border: 1px solid var(--input);
+      border-radius: .55rem;
+      color: var(--foreground);
+      background: var(--background);
+      font: inherit;
+    }
+
+    #unternehmer-vorabcheck textarea.form-control {
+      min-height: 6rem;
+      resize: vertical;
+    }
+
+    #unternehmer-vorabcheck .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+    }
+
+    #unternehmer-vorabcheck .form-check-input {
+      flex: 0 0 auto;
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-top: .2rem;
+      accent-color: var(--primary);
+    }
+
+    #unternehmer-vorabcheck .text-small {
+      font-size: .875rem;
+    }
+
+    #unternehmer-vorabcheck .text-muted {
+      color: var(--muted-foreground);
+    }
+
+    #unternehmer-vorabcheck .up-progress-wrap {
+      display: grid;
+      gap: .45rem;
+    }
+
+    #unternehmer-vorabcheck .up-progress-track {
+      height: .55rem;
+      overflow: hidden;
+      border-radius: 999px;
+      background: var(--muted);
+    }
+
+    #unternehmer-vorabcheck .up-progress-fill {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--primary);
+      transition: width .25s ease;
+    }
+
+    #unternehmer-vorabcheck .up-panel {
+      display: grid;
+      gap: 1.25rem;
+      padding: clamp(1rem, 3vw, 2rem);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: var(--card);
+      color: var(--card-foreground);
+    }
+
+    #unternehmer-vorabcheck .up-step[hidden],
+    #unternehmer-vorabcheck [hidden] {
+      display: none !important;
+    }
+
+    #unternehmer-vorabcheck .up-step {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    #unternehmer-vorabcheck .up-step h2,
+    #unternehmer-vorabcheck .up-step h3,
+    #unternehmer-vorabcheck .up-step p {
+      margin: 0;
+    }
+
+    #unternehmer-vorabcheck .up-kicker {
+      color: var(--muted-foreground);
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    #unternehmer-vorabcheck .up-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    #unternehmer-vorabcheck .up-field {
+      display: grid;
+      align-content: start;
+      gap: .4rem;
+      min-width: 0;
+    }
+
+    #unternehmer-vorabcheck .up-span-2 {
+      grid-column: 1 / -1;
+    }
+
+    #unternehmer-vorabcheck .up-note,
+    #unternehmer-vorabcheck .up-callout,
+    #unternehmer-vorabcheck .up-preview,
+    #unternehmer-vorabcheck .up-review-block {
+      border: 1px solid var(--border);
+      border-radius: .8rem;
+      padding: 1rem;
+    }
+
+    #unternehmer-vorabcheck .up-note,
+    #unternehmer-vorabcheck .up-callout {
+      background: color-mix(in srgb, var(--muted) 55%, transparent);
+    }
+
+    #unternehmer-vorabcheck .up-overview {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .75rem;
+    }
+
+    #unternehmer-vorabcheck .up-overview-item {
+      display: grid;
+      gap: .25rem;
+      padding: 1rem;
+      border-radius: .75rem;
+      background: var(--muted);
+      color: var(--muted-foreground);
+    }
+
+    #unternehmer-vorabcheck .up-overview-item strong {
+      color: var(--foreground);
+      font-weight: 500;
+    }
+
+    #unternehmer-vorabcheck .up-check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .7rem 1rem;
+    }
+
+    #unternehmer-vorabcheck .up-check-card {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+      padding: .85rem;
+      border: 1px solid var(--border);
+      border-radius: .7rem;
+      background: var(--background);
+      color: var(--foreground);
+    }
+
+    #unternehmer-vorabcheck .up-check-card input {
+      margin-top: .2rem;
+    }
+
+    #unternehmer-vorabcheck .up-check-copy {
+      display: grid;
+      gap: .15rem;
+    }
+
+    #unternehmer-vorabcheck .up-check-copy strong {
+      font-weight: 500;
+    }
+
+    #unternehmer-vorabcheck .up-question-list,
+    #unternehmer-vorabcheck .up-flow-list {
+      margin: 0;
+      padding-left: 1.25rem;
+      display: grid;
+      gap: .55rem;
+    }
+
+    #unternehmer-vorabcheck .up-preview {
+      display: grid;
+      gap: .75rem;
+      background: color-mix(in srgb, var(--accent) 45%, transparent);
+      color: var(--accent-foreground);
+    }
+
+    #unternehmer-vorabcheck .up-review {
+      display: grid;
+      gap: .8rem;
+    }
+
+    #unternehmer-vorabcheck .up-review-block {
+      display: grid;
+      gap: .65rem;
+      background: var(--background);
+      color: var(--foreground);
+    }
+
+    #unternehmer-vorabcheck .up-review-content {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    #unternehmer-vorabcheck .up-status {
+      min-height: 1.5em;
+      color: var(--muted-foreground);
+    }
+
+    #unternehmer-vorabcheck .up-actions {
+      padding-top: .25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    #unternehmer-vorabcheck .up-actions-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-left: auto;
+    }
+
+    #unternehmer-vorabcheck .up-required {
+      color: var(--destructive);
+    }
+
+    #unternehmer-vorabcheck .up-saved {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      color: var(--muted-foreground);
+    }
+
+    #unternehmer-vorabcheck .up-saved::before {
+      content: "";
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background: var(--viz-series-1);
+    }
+
+    @media (max-width: 620px) {
+      #unternehmer-vorabcheck .up-grid,
+      #unternehmer-vorabcheck .up-check-grid,
+      #unternehmer-vorabcheck .up-overview {
+        grid-template-columns: 1fr;
+      }
+
+      #unternehmer-vorabcheck .up-span-2 {
+        grid-column: auto;
+      }
+
+      #unternehmer-vorabcheck .up-actions-right,
+      #unternehmer-vorabcheck .up-actions .btn {
+        width: 100%;
+      }
+
+      #unternehmer-vorabcheck .up-actions-right .btn {
+        flex: 1 1 auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #unternehmer-vorabcheck .up-progress-fill {
+        transition: none;
+      }
+    }
+  </style>
+
+  <div class="up-shell">
+    <div class="up-brand-row">
+      <div class="up-brand" aria-label="Unternehmerpfad">
+        <img class="up-brand-logo" alt="Unternehmerpfad Logo" src="data:image/webp;base64,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">
+        <span>UNTERNEHMERPFAD</span>
+      </div>
+      <span class="up-saved text-small" id="up-save-state">Entwurf bleibt auf diesem Gerät</span>
+    </div>
+
+    <div class="up-progress-wrap" aria-label="Fortschritt">
+      <div class="up-progress-row text-small">
+        <span id="up-step-label">Überblick</span>
+        <span id="up-step-count">Start</span>
+      </div>
+      <div class="up-progress-track" aria-hidden="true">
+        <div class="up-progress-fill" id="up-progress-fill"></div>
+      </div>
+    </div>
+
+    <form id="up-form" class="up-panel" action="https://formsubmit.co/unternehmerpfad@gmail.com" method="POST" accept-charset="UTF-8" novalidate>
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" id="up-email-subject" value="Neue Interview-Vorbereitung – Unternehmerpfad">
+      <input type="hidden" name="_autoresponse" value="Vielen Dank für deine Antworten. Unternehmerpfad hat deine Interview-Vorbereitung erhalten und meldet sich bei dir.">
+      <input type="hidden" name="Name" id="up-email-name" value="">
+      <input type="hidden" name="Unternehmen" id="up-email-company" value="">
+      <textarea name="Antworten" id="up-email-summary" hidden></textarea>
+      <section class="up-step" data-step="0">
+        <p class="up-kicker text-small">Vorbereitung auf dein Gespräch</p>
+        <h2>Dein Weg steht im Mittelpunkt.</h2>
+        <p>Dieser kurze Vorab-Check hilft uns, dich und dein Unternehmen kennenzulernen. Gleichzeitig siehst du, welche Themen im Interview auf dich zukommen können. Du musst nichts auswendig lernen.</p>
+
+        <div class="up-overview" aria-label="Überblick zum Vorab-Check">
+          <div class="up-overview-item">
+            <strong>8–12 Minuten</strong>
+            <span class="text-small">für den Vorab-Check</span>
+          </div>
+          <div class="up-overview-item">
+            <strong>Freiwillige Angaben</strong>
+            <span class="text-small">Zahlen dürfen offenbleiben</span>
+          </div>
+          <div class="up-overview-item">
+            <strong>Keine Veröffentlichung</strong>
+            <span class="text-small">durch diesen Fragebogen</span>
+          </div>
+        </div>
+
+        <div class="up-callout">
+          <h3>So läuft es ab</h3>
+          <ol class="up-flow-list">
+            <li>Du beantwortest nur die Punkte, die du teilen möchtest.</li>
+            <li>Wir bereiten daraus ein persönliches Gespräch vor.</li>
+            <li>Vor dem Interview klären wir Ablauf, Aufnahme und sensible Themen gemeinsam.</li>
+          </ol>
+        </div>
+
+        <div class="up-actions">
+          <span class="text-small text-muted">Deine Eingaben werden automatisch als lokaler Entwurf gespeichert.</span>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Vorab-Check starten</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="1" hidden>
+        <div>
+          <p class="up-kicker text-small">Schritt 1</p>
+          <h2>Du und dein Unternehmen</h2>
+          <p class="text-muted">Die wichtigsten Fakten für eine saubere Vorbereitung.</p>
+        </div>
+
+        <div class="up-grid">
+          <label class="up-field form-label" for="person_name">
+            Dein Name <span class="up-required" aria-hidden="true">*</span>
+            <input class="form-control" id="person_name" name="person_name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
+          </label>
+
+          <label class="up-field form-label" for="role">
+            Deine Rolle <span class="up-required" aria-hidden="true">*</span>
+            <input class="form-control" id="role" name="role" type="text" required placeholder="z. B. Gründer, Geschäftsführerin">
+          </label>
+
+          <label class="up-field form-label" for="company">
+            Unternehmen <span class="up-required" aria-hidden="true">*</span>
+            <input class="form-control" id="company" name="company" type="text" autocomplete="organization" required placeholder="Name des Unternehmens">
+          </label>
+
+          <label class="up-field form-label" for="industry">
+            Branche
+            <input class="form-control" id="industry" name="industry" type="text" placeholder="z. B. Logistik, Gastronomie, Immobilien">
+          </label>
+
+          <label class="up-field form-label" for="location">
+            Standort
+            <input class="form-control" id="location" name="location" type="text" placeholder="Stadt oder Region">
+          </label>
+
+          <label class="up-field form-label" for="founded">
+            Gründungsjahr / Einstieg
+            <input class="form-control" id="founded" name="founded" type="text" inputmode="numeric" placeholder="z. B. 2019 oder Übernahme 2024">
+          </label>
+
+          <label class="up-field form-label" for="team_size">
+            Teamgröße
+            <select class="form-select" id="team_size" name="team_size">
+              <option value="">Bitte auswählen</option>
+              <option>Nur ich</option>
+              <option>2–5 Personen</option>
+              <option>6–10 Personen</option>
+              <option>11–25 Personen</option>
+              <option>26–50 Personen</option>
+              <option>Mehr als 50 Personen</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="website">
+            Website oder Social Media
+            <input class="form-control" id="website" name="website" type="text" inputmode="url" placeholder="Link oder @Nutzername">
+          </label>
+
+          <label class="up-field form-label up-span-2" for="company_short">
+            Was macht dein Unternehmen? <span class="up-required" aria-hidden="true">*</span>
+            <textarea class="form-control" id="company_short" name="company_short" rows="4" required placeholder="Beschreibe dein Angebot in 2–4 Sätzen."></textarea>
+          </label>
+        </div>
+
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Weiter: Dein Weg</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="2" hidden>
+        <div>
+          <p class="up-kicker text-small">Schritt 2</p>
+          <h2>Dein unternehmerischer Weg</h2>
+          <p class="text-muted">Stichpunkte reichen vollkommen aus.</p>
+        </div>
+
+        <div class="up-grid">
+          <label class="up-field form-label up-span-2" for="motivation">
+            Wie hat dein Weg begonnen? <span class="up-required" aria-hidden="true">*</span>
+            <textarea class="form-control" id="motivation" name="motivation" rows="4" required placeholder="Ausgangssituation, Idee, Motivation oder Übernahme …"></textarea>
+          </label>
+
+          <label class="up-field form-label" for="milestone">
+            Welcher Moment war besonders wichtig?
+            <textarea class="form-control" id="milestone" name="milestone" rows="5" placeholder="Erster großer Auftrag, Durchbruch, wichtige Entscheidung …"></textarea>
+          </label>
+
+          <label class="up-field form-label" for="difference">
+            Was unterscheidet euch vom Wettbewerb?
+            <textarea class="form-control" id="difference" name="difference" rows="5" placeholder="Arbeitsweise, Haltung, Service, Spezialisierung …"></textarea>
+          </label>
+
+          <label class="up-field form-label" for="challenge">
+            Was war bisher die größte Herausforderung?
+            <textarea class="form-control" id="challenge" name="challenge" rows="5" placeholder="Eine schwierige Phase und wie du damit umgegangen bist."></textarea>
+          </label>
+
+          <label class="up-field form-label" for="lesson">
+            Welche Lektion hat dich am meisten geprägt?
+            <textarea class="form-control" id="lesson" name="lesson" rows="5" placeholder="Etwas, das du heute anders machen würdest."></textarea>
+          </label>
+
+          <label class="up-field form-label up-span-2" for="values">
+            Welche Werte bestimmen deine Entscheidungen?
+            <input class="form-control" id="values" name="values" type="text" placeholder="z. B. Verlässlichkeit, Mut, Disziplin, Fairness">
+          </label>
+        </div>
+
+        <div class="up-preview">
+          <strong>Beispielfragen im Interview</strong>
+          <ul class="up-question-list">
+            <li>Gab es einen Punkt, an dem du ans Aufgeben gedacht hast?</li>
+            <li>Welche Entscheidung würdest du heute anders treffen?</li>
+            <li>Was sehen Außenstehende an deinem Alltag meistens nicht?</li>
+          </ul>
+        </div>
+
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Weiter: Interviewthemen</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="3" hidden>
+        <div>
+          <p class="up-kicker text-small">Schritt 3</p>
+          <h2>Worüber möchtest du sprechen?</h2>
+          <p class="text-muted">Wähle die Themen aus, die im Gespräch vorkommen dürfen. Mehrfachauswahl möglich.</p>
+        </div>
+
+        <div class="up-check-grid" id="up-topic-grid">
+          <label class="up-check-card" for="topic_start">
+            <input class="form-check-input" id="topic_start" name="topics" type="checkbox" value="Gründung und Motivation">
+            <span class="up-check-copy"><strong>Gründung & Motivation</strong><span class="text-small text-muted">Idee, Einstieg und erste Schritte</span></span>
+          </label>
+          <label class="up-check-card" for="topic_daily">
+            <input class="form-check-input" id="topic_daily" name="topics" type="checkbox" value="Alltag und Routinen">
+            <span class="up-check-copy"><strong>Alltag & Routinen</strong><span class="text-small text-muted">Aufgaben, Zeit und Arbeitsweise</span></span>
+          </label>
+          <label class="up-check-card" for="topic_challenges">
+            <input class="form-check-input" id="topic_challenges" name="topics" type="checkbox" value="Herausforderungen und Rückschläge">
+            <span class="up-check-copy"><strong>Herausforderungen</strong><span class="text-small text-muted">Rückschläge und schwierige Phasen</span></span>
+          </label>
+          <label class="up-check-card" for="topic_finance">
+            <input class="form-check-input" id="topic_finance" name="topics" type="checkbox" value="Finanzen und Kennzahlen">
+            <span class="up-check-copy"><strong>Finanzen & Kennzahlen</strong><span class="text-small text-muted">Nur in dem Rahmen, den du festlegst</span></span>
+          </label>
+          <label class="up-check-card" for="topic_team">
+            <input class="form-check-input" id="topic_team" name="topics" type="checkbox" value="Team und Führung">
+            <span class="up-check-copy"><strong>Team & Führung</strong><span class="text-small text-muted">Mitarbeitende, Kultur und Verantwortung</span></span>
+          </label>
+          <label class="up-check-card" for="topic_growth">
+            <input class="form-check-input" id="topic_growth" name="topics" type="checkbox" value="Wachstum und Strategie">
+            <span class="up-check-copy"><strong>Wachstum & Strategie</strong><span class="text-small text-muted">Entscheidungen und nächste Schritte</span></span>
+          </label>
+          <label class="up-check-card" for="topic_personal">
+            <input class="form-check-input" id="topic_personal" name="topics" type="checkbox" value="Persönlichkeit und Mindset">
+            <span class="up-check-copy"><strong>Persönlichkeit & Mindset</strong><span class="text-small text-muted">Werte, Druck und Motivation</span></span>
+          </label>
+          <label class="up-check-card" for="topic_future">
+            <input class="form-check-input" id="topic_future" name="topics" type="checkbox" value="Ziele und Zukunft">
+            <span class="up-check-copy"><strong>Ziele & Zukunft</strong><span class="text-small text-muted">Vision und kommende Projekte</span></span>
+          </label>
+        </div>
+
+        <div class="up-note" id="up-finance-fields" hidden>
+          <div class="up-grid">
+            <label class="up-field form-label" for="finance_openness">
+              Wie offen möchtest du über Zahlen sprechen?
+              <select class="form-select" id="finance_openness" name="finance_openness">
+                <option value="">Bitte auswählen</option>
+                <option>Konkrete Zahlen sind in Ordnung</option>
+                <option>Nur ungefähre Spannen</option>
+                <option>Nur allgemeine Einordnung</option>
+                <option>Bitte keine Finanzfragen</option>
+              </select>
+            </label>
+
+            <label class="up-field form-label" for="revenue_range">
+              Umsatzgröße – freiwillig
+              <select class="form-select" id="revenue_range" name="revenue_range">
+                <option value="">Keine Angabe</option>
+                <option>Bis 10.000 € pro Monat</option>
+                <option>10.000–25.000 € pro Monat</option>
+                <option>25.000–50.000 € pro Monat</option>
+                <option>50.000–100.000 € pro Monat</option>
+                <option>Mehr als 100.000 € pro Monat</option>
+                <option>Andere Bezugsgröße / saisonabhängig</option>
+              </select>
+            </label>
+
+            <label class="up-field form-label" for="start_capital">
+              Startkapital – freiwillig
+              <input class="form-control" id="start_capital" name="start_capital" type="text" placeholder="Betrag, Spanne oder „ohne Startkapital“">
+            </label>
+
+            <label class="up-field form-label" for="finance_note">
+              Was darf bei Zahlen nicht missverstanden werden?
+              <input class="form-control" id="finance_note" name="finance_note" type="text" placeholder="z. B. Umsatz ist saisonabhängig">
+            </label>
+          </div>
+        </div>
+
+        <label class="up-field form-label" for="focus_topic">
+          Welches Thema soll im Interview auf jeden Fall vorkommen?
+          <textarea class="form-control" id="focus_topic" name="focus_topic" rows="3" placeholder="Dein Wunsch-Schwerpunkt …"></textarea>
+        </label>
+
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Weiter: Rahmen klären</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="4" hidden>
+        <div>
+          <p class="up-kicker text-small">Schritt 4</p>
+          <h2>Damit du dich wohlfühlst</h2>
+          <p class="text-muted">Lege fest, was wir vor dem Gespräch berücksichtigen sollen.</p>
+        </div>
+
+        <div class="up-grid">
+          <label class="up-field form-label" for="recording">
+            Bevorzugte Gesprächsform
+            <select class="form-select" id="recording" name="recording">
+              <option value="">Noch offen</option>
+              <option>Video und Ton sind in Ordnung</option>
+              <option>Lieber nur Ton / Podcast</option>
+              <option>Erst in einem Vorgespräch klären</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="preferred_contact">
+            Bevorzugter Kontaktweg
+            <select class="form-select" id="preferred_contact" name="preferred_contact">
+              <option value="">Bitte auswählen</option>
+              <option>Instagram</option>
+              <option>E-Mail</option>
+              <option>Telefon / WhatsApp</option>
+              <option>LinkedIn</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="participant_email">
+            Deine E-Mail-Adresse <span class="up-required" aria-hidden="true">*</span>
+            <input class="form-control" id="participant_email" name="_replyto" type="email" autocomplete="email" required placeholder="name@unternehmen.de">
+          </label>
+
+          <label class="up-field form-label" for="contact">
+            Telefon oder Social Media – freiwillig
+            <input class="form-control" id="contact" name="contact" type="text" placeholder="Telefonnummer oder @Nutzername">
+          </label>
+
+          <label class="up-field form-label" for="no_go">
+            Gibt es No-Go-Themen?
+            <textarea class="form-control" id="no_go" name="no_go" rows="4" placeholder="Themen, Namen oder Angaben, die wir nicht ansprechen sollen."></textarea>
+          </label>
+
+          <label class="up-field form-label" for="check_again">
+            Was möchtest du vor Veröffentlichung noch einmal prüfen?
+            <textarea class="form-control" id="check_again" name="check_again" rows="4" placeholder="z. B. konkrete Zahlen, Namen oder sensible Aussagen"></textarea>
+          </label>
+
+          <label class="up-field form-label up-span-2" for="own_question">
+            Hast du Fragen oder Hinweise an uns?
+            <textarea class="form-control" id="own_question" name="own_question" rows="3" placeholder="Alles, was wir vorab wissen sollten …"></textarea>
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" id="confirm_preparation" name="confirm_preparation" type="checkbox" required>
+          <label class="form-check-label" for="confirm_preparation">Ich habe verstanden, dass meine Angaben über den Formular-Dienst FormSubmit an Unternehmerpfad@gmail.com übermittelt werden, nur der Interviewvorbereitung dienen und noch keine Veröffentlichung freigeben. <span class="up-required" aria-hidden="true">*</span></label>
+        </div>
+
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Antworten prüfen</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="5" hidden>
+        <div>
+          <p class="up-kicker text-small">Fertig</p>
+          <h2>Deine Vorbereitung ist komplett.</h2>
+          <p>Prüfe die Zusammenfassung und sende sie anschließend direkt an Unternehmerpfad. Du erhältst eine Bestätigung an deine angegebene E-Mail-Adresse.</p>
+        </div>
+
+        <div class="up-preview" aria-labelledby="up-preparation-title">
+          <strong id="up-preparation-title">Darauf kannst du dich im Gespräch einstellen</strong>
+          <ul class="up-question-list" id="up-tailored-questions"></ul>
+        </div>
+
+        <div class="up-review" id="up-review" aria-label="Zusammenfassung der Antworten"></div>
+
+        <div class="up-note">
+          <strong>Direkte Übermittlung</strong>
+          <p class="text-small">Mit dem grünen Button werden deine Antworten über FormSubmit an Unternehmerpfad@gmail.com übertragen. Als Alternative kannst du die Zusammenfassung kopieren oder als Textdatei speichern.</p>
+        </div>
+
+        <p class="up-status text-small" id="up-status" role="status" aria-live="polite"></p>
+
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Angaben ändern</button>
+          <div class="up-actions-right">
+            <button class="btn" type="button" id="up-download">Textdatei speichern</button>
+            <button class="btn" type="button" id="up-copy">Antworten kopieren</button>
+            <button class="btn btn-primary" type="submit" id="up-send">Sicher an Unternehmerpfad senden</button>
+          </div>
+        </div>
+
+        <button class="btn btn-ghost" type="button" id="up-reset">Entwurf löschen und neu starten</button>
+      </section>
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var root = document.getElementById("unternehmer-vorabcheck");
+      if (!root) return;
+
+      var form = root.querySelector("#up-form");
+      var steps = Array.prototype.slice.call(root.querySelectorAll(".up-step"));
+      var progressFill = root.querySelector("#up-progress-fill");
+      var stepLabel = root.querySelector("#up-step-label");
+      var stepCount = root.querySelector("#up-step-count");
+      var saveState = root.querySelector("#up-save-state");
+      var financeToggle = root.querySelector("#topic_finance");
+      var financeFields = root.querySelector("#up-finance-fields");
+      var review = root.querySelector("#up-review");
+      var tailoredQuestions = root.querySelector("#up-tailored-questions");
+      var status = root.querySelector("#up-status");
+      var currentStep = 0;
+      var storageKey = "unternehmerpfad-vorabcheck-v1";
+      var stepNames = ["Überblick", "Unternehmen", "Dein Weg", "Interviewthemen", "Rahmen", "Zusammenfassung"];
+
+      var labels = {
+        person_name: "Name",
+        role: "Rolle",
+        company: "Unternehmen",
+        industry: "Branche",
+        location: "Standort",
+        founded: "Gründungsjahr / Einstieg",
+        team_size: "Teamgröße",
+        website: "Website / Social Media",
+        company_short: "Kurzbeschreibung",
+        motivation: "Beginn des Weges",
+        milestone: "Wichtiger Moment",
+        difference: "Unterschied zum Wettbewerb",
+        challenge: "Größte Herausforderung",
+        lesson: "Wichtigste Lektion",
+        values: "Werte",
+        topics: "Gewünschte Interviewthemen",
+        finance_openness: "Offenheit bei Zahlen",
+        revenue_range: "Umsatzgröße",
+        start_capital: "Startkapital",
+        finance_note: "Hinweis zu Zahlen",
+        focus_topic: "Wunsch-Schwerpunkt",
+        recording: "Gesprächsform",
+        preferred_contact: "Kontaktweg",
+        _replyto: "E-Mail-Adresse",
+        contact: "Kontaktdaten",
+        no_go: "No-Go-Themen",
+        check_again: "Vor Veröffentlichung prüfen",
+        own_question: "Fragen / Hinweise"
+      };
+
+      var groups = [
+        { title: "Person & Unternehmen", fields: ["person_name", "role", "company", "industry", "location", "founded", "team_size", "website", "company_short"], step: 1 },
+        { title: "Unternehmerischer Weg", fields: ["motivation", "milestone", "difference", "challenge", "lesson", "values"], step: 2 },
+        { title: "Interviewthemen", fields: ["topics", "finance_openness", "revenue_range", "start_capital", "finance_note", "focus_topic"], step: 3 },
+        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 4 }
+      ];
+
+      function getNamedValue(name) {
+        var fields = Array.prototype.slice.call(form.querySelectorAll("[name=\"" + name + "\"]"));
+        if (!fields.length) return "";
+        if (fields[0].type === "checkbox") {
+          return fields.filter(function (field) { return field.checked; }).map(function (field) { return field.value || "Ja"; }).join(", ");
+        }
+        if (fields[0].type === "radio") {
+          var checked = fields.find(function (field) { return field.checked; });
+          return checked ? checked.value : "";
+        }
+        return fields[0].value.trim();
+      }
+
+      function collectData() {
+        var data = {};
+        Object.keys(labels).forEach(function (name) {
+          data[name] = getNamedValue(name);
+        });
+        data.confirm_preparation = root.querySelector("#confirm_preparation").checked;
+        return data;
+      }
+
+      function saveDraft() {
+        var state = { step: currentStep, values: {} };
+        Array.prototype.slice.call(form.elements).forEach(function (field) {
+          if (!field.name) return;
+          if (field.type === "checkbox" || field.type === "radio") {
+            if (!state.values[field.name]) state.values[field.name] = [];
+            if (field.checked) state.values[field.name].push(field.value || "on");
+          } else {
+            state.values[field.name] = field.value;
+          }
+        });
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(state));
+          saveState.textContent = "Entwurf gespeichert";
+        } catch (error) {
+          saveState.textContent = "Entwurf nur für diese Sitzung";
+        }
+      }
+
+      function restoreDraft() {
+        var raw;
+        try {
+          raw = localStorage.getItem(storageKey);
+        } catch (error) {
+          return;
+        }
+        if (!raw) return;
+        try {
+          var state = JSON.parse(raw);
+          Object.keys(state.values || {}).forEach(function (name) {
+            var fields = Array.prototype.slice.call(form.querySelectorAll("[name=\"" + name + "\"]"));
+            fields.forEach(function (field) {
+              if (field.type === "checkbox" || field.type === "radio") {
+                field.checked = Array.isArray(state.values[name]) && state.values[name].indexOf(field.value || "on") !== -1;
+              } else {
+                field.value = state.values[name] || "";
+              }
+            });
+          });
+          currentStep = Math.max(0, Math.min(Number(state.step) || 0, steps.length - 1));
+          saveState.textContent = "Gespeicherten Entwurf geladen";
+        } catch (error) {
+          currentStep = 0;
+        }
+      }
+
+      function updateFinanceVisibility() {
+        financeFields.hidden = !financeToggle.checked;
+      }
+
+      function showStep(index) {
+        currentStep = Math.max(0, Math.min(index, steps.length - 1));
+        steps.forEach(function (step, stepIndex) {
+          step.hidden = stepIndex !== currentStep;
+        });
+        var progress = currentStep === 0 ? 0 : (currentStep / (steps.length - 1)) * 100;
+        progressFill.style.width = progress + "%";
+        stepLabel.textContent = stepNames[currentStep];
+        stepCount.textContent = currentStep === 0 ? "Start" : (currentStep === steps.length - 1 ? "Abgeschlossen" : "Schritt " + currentStep + " von 4");
+        if (currentStep === steps.length - 1) buildReview();
+        saveDraft();
+        var heading = steps[currentStep].querySelector("h2");
+        if (heading) {
+          heading.setAttribute("tabindex", "-1");
+          heading.focus({ preventScroll: true });
+          heading.removeAttribute("tabindex");
+        }
+      }
+
+      function validateStep() {
+        var requiredFields = Array.prototype.slice.call(steps[currentStep].querySelectorAll("[required]"));
+        for (var i = 0; i < requiredFields.length; i += 1) {
+          if (!requiredFields[i].checkValidity()) {
+            requiredFields[i].reportValidity();
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function validateAllRequired() {
+        var requiredFields = Array.prototype.slice.call(form.querySelectorAll("[required]"));
+        for (var i = 0; i < requiredFields.length; i += 1) {
+          if (!requiredFields[i].checkValidity()) {
+            var containingStep = requiredFields[i].closest(".up-step");
+            if (containingStep) showStep(Number(containingStep.getAttribute("data-step")));
+            requiredFields[i].reportValidity();
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function escapeText(value) {
+        return String(value || "").replace(/[&<>\"']/g, function (character) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#039;" }[character];
+        });
+      }
+
+      function groupText(group, data) {
+        var lines = [];
+        group.fields.forEach(function (name) {
+          var value = data[name];
+          if (value) lines.push(labels[name] + ": " + value);
+        });
+        return lines.length ? lines.join("\n\n") : "Keine Angaben";
+      }
+
+      function buildQuestions(data) {
+        var selected = data.topics ? data.topics.split(", ") : [];
+        var pool = [
+          { topic: "Gründung und Motivation", text: "Wie ist aus deiner ersten Idee ein echtes Unternehmen geworden?" },
+          { topic: "Alltag und Routinen", text: "Wie sieht ein typischer Arbeitstag aus – und was daran überrascht andere?" },
+          { topic: "Herausforderungen und Rückschläge", text: "Welche schwierige Phase hat dich als Unternehmer am stärksten verändert?" },
+          { topic: "Finanzen und Kennzahlen", text: "Welche wirtschaftliche Kennzahl beschreibt dein Geschäft am verständlichsten?" },
+          { topic: "Team und Führung", text: "Was erwartest du von deinem Team – und was darf dein Team von dir erwarten?" },
+          { topic: "Wachstum und Strategie", text: "Welche Entscheidung ist für den nächsten Wachstumsschritt besonders wichtig?" },
+          { topic: "Persönlichkeit und Mindset", text: "Wie gehst du mit Druck, Unsicherheit und Verantwortung um?" },
+          { topic: "Ziele und Zukunft", text: "Wo soll dein Unternehmen in drei Jahren stehen?" }
+        ];
+        var chosen = pool.filter(function (item) { return selected.indexOf(item.topic) !== -1; }).map(function (item) { return item.text; });
+        if (!chosen.length) {
+          chosen = [
+            "Wie hat dein unternehmerischer Weg begonnen?",
+            "Was war bisher deine wichtigste Entscheidung?",
+            "Welche Lektion möchtest du anderen mitgeben?"
+          ];
+        }
+        chosen = chosen.slice(0, 5);
+        tailoredQuestions.innerHTML = chosen.map(function (question) { return "<li>" + escapeText(question) + "</li>"; }).join("");
+      }
+
+      function buildReview() {
+        var data = collectData();
+        review.innerHTML = groups.map(function (group) {
+          return "<section class=\"up-review-block\">" +
+            "<div class=\"up-review-head\"><strong>" + escapeText(group.title) + "</strong>" +
+            "<button class=\"btn btn-ghost text-small\" type=\"button\" data-edit-step=\"" + group.step + "\">Bearbeiten</button></div>" +
+            "<div class=\"up-review-content text-small\">" + escapeText(groupText(group, data)) + "</div>" +
+            "</section>";
+        }).join("");
+        buildQuestions(data);
+      }
+
+      function makePlainText() {
+        var data = collectData();
+        var heading = "UNTERNEHMERPFAD – VORAB-CHECK\n" +
+          "Erstellt am: " + new Date().toLocaleDateString("de-DE") + "\n" +
+          "==================================================\n\n";
+        var body = groups.map(function (group) {
+          return group.title.toUpperCase() + "\n" + groupText(group, data);
+        }).join("\n\n--------------------------------------------------\n\n");
+        return heading + body + "\n\nHinweis: Diese Angaben dienen der Interviewvorbereitung und stellen keine Veröffentlichungsfreigabe dar.";
+      }
+
+      function copyText() {
+        var text = makePlainText();
+        var done = function () {
+          status.textContent = "Antworten kopiert – du kannst sie jetzt in eine Nachricht oder E-Mail einfügen.";
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done).catch(function () { fallbackCopy(text, done); });
+        } else {
+          fallbackCopy(text, done);
+        }
+      }
+
+      function fallbackCopy(text, callback) {
+        var area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "absolute";
+        area.style.left = "-9999px";
+        root.appendChild(area);
+        area.select();
+        try {
+          document.execCommand("copy");
+          callback();
+        } catch (error) {
+          status.textContent = "Kopieren war nicht möglich. Bitte nutze stattdessen „Textdatei speichern“.";
+        }
+        area.remove();
+      }
+
+      function downloadText() {
+        var data = collectData();
+        var baseName = (data.company || data.person_name || "unternehmer").toLowerCase()
+          .replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+          .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        var blob = new Blob([makePlainText()], { type: "text/plain;charset=utf-8" });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = "unternehmerpfad-vorabcheck-" + (baseName || "antworten") + ".txt";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+        status.textContent = "Textdatei gespeichert.";
+      }
+
+      form.addEventListener("input", function () {
+        saveDraft();
+        updateFinanceVisibility();
+      });
+
+      form.addEventListener("change", function () {
+        saveDraft();
+        updateFinanceVisibility();
+      });
+
+      form.addEventListener("submit", function (event) {
+        if (currentStep !== steps.length - 1) {
+          event.preventDefault();
+          if (validateStep()) showStep(currentStep + 1);
+          return;
+        }
+        if (!validateAllRequired()) {
+          event.preventDefault();
+          return;
+        }
+
+        var data = collectData();
+        var subjectParts = [data.company, data.person_name].filter(Boolean);
+        root.querySelector("#up-email-subject").value = "Neue Interview-Vorbereitung" + (subjectParts.length ? ": " + subjectParts.join(" – ") : " – Unternehmerpfad");
+        root.querySelector("#up-email-name").value = data.person_name || "Nicht angegeben";
+        root.querySelector("#up-email-company").value = data.company || "Nicht angegeben";
+        root.querySelector("#up-email-summary").value = makePlainText();
+
+        Array.prototype.slice.call(form.elements).forEach(function (field) {
+          var shouldKeep = field.type === "hidden" || field.id === "up-email-summary" || field.name === "_replyto" || field.type === "submit";
+          if (field.name && !shouldKeep) {
+            field.setAttribute("data-email-disabled", "true");
+            field.disabled = true;
+          }
+        });
+
+        var sendButton = root.querySelector("#up-send");
+        sendButton.disabled = true;
+        sendButton.textContent = "Antworten werden übertragen …";
+        status.textContent = "Sichere Übermittlung an Unternehmerpfad@gmail.com wird geöffnet …";
+      });
+
+      root.addEventListener("click", function (event) {
+        var next = event.target.closest("[data-next]");
+        var prev = event.target.closest("[data-prev]");
+        var edit = event.target.closest("[data-edit-step]");
+        if (next) {
+          if (validateStep()) showStep(currentStep + 1);
+        } else if (prev) {
+          showStep(currentStep - 1);
+        } else if (edit) {
+          showStep(Number(edit.getAttribute("data-edit-step")));
+        }
+      });
+
+      root.querySelector("#up-copy").addEventListener("click", copyText);
+      root.querySelector("#up-download").addEventListener("click", downloadText);
+      root.querySelector("#up-reset").addEventListener("click", function () {
+        var confirmed = window.confirm("Möchtest du alle Eingaben auf diesem Gerät wirklich löschen?");
+        if (!confirmed) return;
+        form.reset();
+        try { localStorage.removeItem(storageKey); } catch (error) {}
+        updateFinanceVisibility();
+        status.textContent = "";
+        showStep(0);
+        saveState.textContent = "Neuer Entwurf";
+      });
+
+      restoreDraft();
+      updateFinanceVisibility();
+      showStep(currentStep);
+
+      window.addEventListener("pageshow", function () {
+        Array.prototype.slice.call(form.querySelectorAll("[data-email-disabled=\"true\"]")).forEach(function (field) {
+          field.disabled = false;
+          field.removeAttribute("data-email-disabled");
+        });
+        var sendButton = root.querySelector("#up-send");
+        sendButton.disabled = false;
+        sendButton.textContent = "Sicher an Unternehmerpfad senden";
+      });
+    }());
+  </script>
+</section>
+</body>
+</html>
