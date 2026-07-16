@@ -423,9 +423,7 @@
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_subject" id="up-email-subject" value="Neue Interview-Vorbereitung – Unternehmerpfad">
       <input type="hidden" name="_autoresponse" value="Vielen Dank für deine Antworten. Unternehmerpfad hat deine Interview-Vorbereitung erhalten und meldet sich bei dir.">
-      <input type="hidden" name="Name" id="up-email-name" value="">
-      <input type="hidden" name="Unternehmen" id="up-email-company" value="">
-      <textarea name="Antworten" id="up-email-summary" hidden></textarea>
+      <div id="up-email-fields" hidden></div>
       <section class="up-step" data-step="0">
         <p class="up-kicker text-small">Vorbereitung auf dein Gespräch</p>
         <h2>Dein Weg steht im Mittelpunkt.</h2>
@@ -1022,6 +1020,48 @@
         return heading + body + "\n\nHinweis: Diese Angaben dienen der Interviewvorbereitung und stellen keine Veröffentlichungsfreigabe dar.";
       }
 
+      function addEmailRow(container, name, value) {
+        if (!value) return;
+        var field = document.createElement("textarea");
+        field.hidden = true;
+        field.name = name;
+        field.value = value;
+        field.setAttribute("data-email-field", "true");
+        container.appendChild(field);
+      }
+
+      function prepareEmailFields(data) {
+        var container = root.querySelector("#up-email-fields");
+        container.innerHTML = "";
+        var sections = [
+          {
+            title: "1 · PERSON & UNTERNEHMEN",
+            fields: ["person_name", "role", "company", "industry", "location", "founded", "team_size", "website", "company_short"]
+          },
+          {
+            title: "2 · UNTERNEHMERISCHER WEG",
+            fields: ["motivation", "milestone", "difference", "challenge", "lesson", "values"]
+          },
+          {
+            title: "3 · INTERVIEWTHEMEN & ZAHLEN",
+            fields: ["topics", "finance_openness", "revenue_range", "start_capital", "finance_note", "focus_topic"]
+          },
+          {
+            title: "4 · RAHMEN & KONTAKT",
+            fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"]
+          }
+        ];
+
+        addEmailRow(container, "Eingegangen am", new Date().toLocaleString("de-DE"));
+        sections.forEach(function (section) {
+          addEmailRow(container, section.title, "────────────────────────");
+          section.fields.forEach(function (name) {
+            if (data[name]) addEmailRow(container, labels[name], data[name]);
+          });
+        });
+        addEmailRow(container, "Hinweis", "Die Angaben dienen der Interviewvorbereitung und sind noch keine Veröffentlichungsfreigabe.");
+      }
+
       function copyText() {
         var text = makePlainText();
         var done = function () {
@@ -1092,12 +1132,10 @@
         var data = collectData();
         var subjectParts = [data.company, data.person_name].filter(Boolean);
         root.querySelector("#up-email-subject").value = "Neue Interview-Vorbereitung" + (subjectParts.length ? ": " + subjectParts.join(" – ") : " – Unternehmerpfad");
-        root.querySelector("#up-email-name").value = data.person_name || "Nicht angegeben";
-        root.querySelector("#up-email-company").value = data.company || "Nicht angegeben";
-        root.querySelector("#up-email-summary").value = makePlainText();
+        prepareEmailFields(data);
 
         Array.prototype.slice.call(form.elements).forEach(function (field) {
-          var shouldKeep = field.type === "hidden" || field.id === "up-email-summary" || field.name === "_replyto" || field.type === "submit";
+          var shouldKeep = field.type === "hidden" || field.hasAttribute("data-email-field") || field.name === "_replyto" || field.type === "submit";
           if (field.name && !shouldKeep) {
             field.setAttribute("data-email-disabled", "true");
             field.disabled = true;
