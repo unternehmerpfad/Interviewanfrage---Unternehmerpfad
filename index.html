@@ -469,6 +469,220 @@
         </div>
 
         <div class="up-grid">
+          <label class="up-field form-label up-span-2" for="industry">
+            Branche auswählen <span class="up-required" aria-hidden="true">*</span>
+            <select class="form-select" id="industry" name="industry" required>
+              <option value="">Bitte Branche auswählen</option>
+              <optgroup label="Gastronomie & Lebensmittel">
+                <option data-profile="gastro">Restaurant</option>
+                <option data-profile="gastro">Café</option>
+                <option data-profile="gastro">Bar / Kneipe</option>
+                <option data-profile="gastro">Imbiss / Snackbar</option>
+                <option data-profile="gastro">Foodtruck</option>
+                <option data-profile="gastro">Catering</option>
+                <option data-profile="gastro">Lieferdienst</option>
+                <option data-profile="gastro">Gemeinschaftsverpflegung</option>
+                <option data-profile="food_production">Bäckerei / Konditorei</option>
+                <option data-profile="food_production">Metzgerei</option>
+                <option data-profile="food_production">Lebensmittelproduktion</option>
+                <option data-profile="food_production">Getränkeherstellung / Brauerei</option>
+                <option data-profile="retail">Lebensmittelhandel</option>
+              </optgroup>
+              <optgroup label="Automobil & Mobilität">
+                <option data-profile="auto_trade">Autohandel</option>
+                <option data-profile="auto_service">Kfz-Werkstatt</option>
+                <option data-profile="auto_service">Fahrzeugaufbereitung</option>
+                <option data-profile="auto_service">Karosserie- und Lackierbetrieb</option>
+                <option data-profile="auto_service">Reifenservice</option>
+                <option data-profile="mobility">Abschleppdienst</option>
+                <option data-profile="mobility">Autovermietung</option>
+                <option data-profile="mobility">Taxi- / Chauffeurdienst</option>
+                <option data-profile="mobility">Fahrschule</option>
+                <option data-profile="mobility">Fahrradhandel / Fahrradwerkstatt</option>
+                <option data-profile="auto_trade">Motorradhandel</option>
+                <option data-profile="auto_service">Motorradwerkstatt</option>
+                <option data-profile="mobility">Ladeinfrastruktur / E-Mobilität</option>
+              </optgroup>
+              <optgroup label="Bau, Handwerk & Technik">
+                <option data-profile="construction">Bauunternehmen</option>
+                <option data-profile="construction">Elektrobetrieb</option>
+                <option data-profile="construction">Sanitär / Heizung / Klima</option>
+                <option data-profile="construction">Malerbetrieb</option>
+                <option data-profile="construction">Tischlerei / Schreinerei</option>
+                <option data-profile="construction">Dachdeckerei</option>
+                <option data-profile="construction">Fliesenleger</option>
+                <option data-profile="construction">Maurerbetrieb</option>
+                <option data-profile="construction">Metallbau</option>
+                <option data-profile="construction">Innenausbau / Trockenbau</option>
+                <option data-profile="construction">Garten- und Landschaftsbau</option>
+                <option data-profile="construction">Gebäudetechnik</option>
+                <option data-profile="construction">Solar / Photovoltaik</option>
+                <option data-profile="construction">Architekturbüro</option>
+                <option data-profile="construction">Ingenieurbüro</option>
+                <option data-profile="construction">Bauplanung / Gutachten</option>
+              </optgroup>
+              <optgroup label="Immobilien">
+                <option data-profile="real_estate">Immobilienmakler</option>
+                <option data-profile="real_estate">Haus- und Immobilienverwaltung</option>
+                <option data-profile="real_estate">Projektentwicklung</option>
+                <option data-profile="real_estate">Bauträger</option>
+                <option data-profile="facility">Facility Management</option>
+                <option data-profile="real_estate">Home Staging</option>
+                <option data-profile="real_estate">Ferienimmobilien</option>
+              </optgroup>
+              <optgroup label="Handel & E-Commerce">
+                <option data-profile="retail">Einzelhandel</option>
+                <option data-profile="retail">Großhandel</option>
+                <option data-profile="ecommerce">E-Commerce / Online-Shop</option>
+                <option data-profile="retail">Modehandel</option>
+                <option data-profile="retail">Schmuck / Uhren</option>
+                <option data-profile="retail">Elektronikhandel</option>
+                <option data-profile="retail">Möbelhandel</option>
+                <option data-profile="retail">Sportartikelhandel</option>
+                <option data-profile="retail">Spielwarenhandel</option>
+                <option data-profile="retail">Tierbedarf</option>
+                <option data-profile="retail">Baustoffhandel</option>
+                <option data-profile="ecommerce">Import / Export</option>
+                <option data-profile="retail">Franchisebetrieb</option>
+              </optgroup>
+              <optgroup label="Gesundheit, Medizin & Pflege">
+                <option data-profile="health">Arztpraxis</option>
+                <option data-profile="health">Zahnarztpraxis</option>
+                <option data-profile="health">Physiotherapie</option>
+                <option data-profile="health">Ergotherapie</option>
+                <option data-profile="health">Psychotherapie</option>
+                <option data-profile="health">Apotheke</option>
+                <option data-profile="care">Ambulanter Pflegedienst</option>
+                <option data-profile="care">Pflegeheim / Seniorenbetreuung</option>
+                <option data-profile="health">Hebamme / Geburtshilfe</option>
+                <option data-profile="health">Medizintechnik</option>
+                <option data-profile="health">Gesundheitsberatung</option>
+                <option data-profile="health">Ernährungsberatung</option>
+              </optgroup>
+              <optgroup label="Beauty, Wellness & Fitness">
+                <option data-profile="beauty">Friseursalon</option>
+                <option data-profile="beauty">Barbershop</option>
+                <option data-profile="beauty">Kosmetikstudio</option>
+                <option data-profile="beauty">Nagelstudio</option>
+                <option data-profile="beauty">Tattoo- / Piercingstudio</option>
+                <option data-profile="beauty">Massage / Wellness</option>
+                <option data-profile="fitness">Fitnessstudio</option>
+                <option data-profile="fitness">Personal Training</option>
+                <option data-profile="fitness">Yoga- / Pilatesstudio</option>
+                <option data-profile="fitness">Tanzschule</option>
+              </optgroup>
+              <optgroup label="IT, Software & Digitales">
+                <option data-profile="tech">Softwareentwicklung</option>
+                <option data-profile="tech">SaaS-Unternehmen</option>
+                <option data-profile="tech">IT-Dienstleistungen</option>
+                <option data-profile="tech">Web- / App-Entwicklung</option>
+                <option data-profile="tech">Künstliche Intelligenz / Daten</option>
+                <option data-profile="tech">Cybersecurity</option>
+                <option data-profile="tech">Cloud / Hosting</option>
+                <option data-profile="tech">Telekommunikation</option>
+                <option data-profile="tech">Hardware / Elektronik</option>
+                <option data-profile="tech">Gaming / E-Sport</option>
+              </optgroup>
+              <optgroup label="Medien, Marketing & Kreativwirtschaft">
+                <option data-profile="agency_media">Marketingagentur</option>
+                <option data-profile="agency_media">Social-Media-Agentur</option>
+                <option data-profile="agency_media">Werbeagentur</option>
+                <option data-profile="agency_media">PR-Agentur</option>
+                <option data-profile="agency_media">Grafik- / Webdesign</option>
+                <option data-profile="agency_media">Fotografie</option>
+                <option data-profile="agency_media">Video- / Filmproduktion</option>
+                <option data-profile="agency_media">Musikproduktion / Label</option>
+                <option data-profile="agency_media">Podcast / Medienproduktion</option>
+                <option data-profile="agency_media">Verlag / Druckerei</option>
+                <option data-profile="agency_media">Influencer / Content Creator</option>
+              </optgroup>
+              <optgroup label="Logistik & Transport">
+                <option data-profile="logistics">Umzugsunternehmen</option>
+                <option data-profile="logistics">Spedition</option>
+                <option data-profile="logistics">Kurier- / Paketdienst</option>
+                <option data-profile="logistics">Lager / Logistikzentrum</option>
+                <option data-profile="logistics">Transportdienstleistung</option>
+                <option data-profile="logistics">E-Commerce-Fulfillment</option>
+                <option data-profile="logistics">Schifffahrt / Hafenwirtschaft</option>
+                <option data-profile="facility">Entsorgung / Recycling</option>
+              </optgroup>
+              <optgroup label="Events, Freizeit & Tourismus">
+                <option data-profile="events">Eventagentur</option>
+                <option data-profile="events">Hochzeitsplanung</option>
+                <option data-profile="events">Veranstaltungstechnik</option>
+                <option data-profile="events">DJ / Künstlervermittlung</option>
+                <option data-profile="events">Club / Diskothek</option>
+                <option data-profile="hospitality">Hotel</option>
+                <option data-profile="hospitality">Hostel / Pension</option>
+                <option data-profile="hospitality">Ferienwohnung / Campingplatz</option>
+                <option data-profile="hospitality">Reisebüro / Reiseveranstalter</option>
+                <option data-profile="hospitality">Freizeit- / Erlebnisanbieter</option>
+              </optgroup>
+              <optgroup label="Finanzen, Recht & Beratung">
+                <option data-profile="finance">Versicherungsmakler</option>
+                <option data-profile="finance">Finanzberatung</option>
+                <option data-profile="finance">Vermögensberatung</option>
+                <option data-profile="finance">FinTech / Zahlungsdienst</option>
+                <option data-profile="professional">Buchhaltung</option>
+                <option data-profile="professional">Steuerberatung</option>
+                <option data-profile="professional">Rechtsanwaltskanzlei</option>
+                <option data-profile="professional">Unternehmensberatung</option>
+                <option data-profile="professional">Personalberatung / Recruiting</option>
+                <option data-profile="professional">HR-Dienstleistungen</option>
+              </optgroup>
+              <optgroup label="Bildung & Coaching">
+                <option data-profile="education">Kindertagesstätte</option>
+                <option data-profile="education">Privatschule / Bildungsträger</option>
+                <option data-profile="education">Nachhilfe</option>
+                <option data-profile="education">Sprachschule</option>
+                <option data-profile="education">Weiterbildung / Seminare</option>
+                <option data-profile="education">Online-Kurse</option>
+                <option data-profile="education">Business-Coaching</option>
+                <option data-profile="education">Life-Coaching</option>
+              </optgroup>
+              <optgroup label="Industrie & Produktion">
+                <option data-profile="manufacturing">Maschinenbau</option>
+                <option data-profile="manufacturing">Metallverarbeitung</option>
+                <option data-profile="manufacturing">Holz- / Möbelproduktion</option>
+                <option data-profile="manufacturing">Textil- / Modeproduktion</option>
+                <option data-profile="manufacturing">Chemie / Kunststoffe</option>
+                <option data-profile="manufacturing">Verpackungsindustrie</option>
+                <option data-profile="manufacturing">Elektronikproduktion</option>
+                <option data-profile="manufacturing">3D-Druck</option>
+                <option data-profile="manufacturing">Lohnfertigung</option>
+              </optgroup>
+              <optgroup label="Landwirtschaft, Energie & Umwelt">
+                <option data-profile="agriculture">Landwirtschaft</option>
+                <option data-profile="agriculture">Forstwirtschaft</option>
+                <option data-profile="agriculture">Gärtnerei / Pflanzenhandel</option>
+                <option data-profile="agriculture">Tierhaltung / Tierzucht</option>
+                <option data-profile="agriculture">Erneuerbare Energien</option>
+                <option data-profile="agriculture">Energieberatung</option>
+                <option data-profile="agriculture">Umwelttechnik / CleanTech</option>
+              </optgroup>
+              <optgroup label="Gebäudeservice & Sicherheit">
+                <option data-profile="facility">Gebäudereinigung</option>
+                <option data-profile="facility">Sicherheitsdienst</option>
+                <option data-profile="facility">Hausmeisterservice</option>
+                <option data-profile="facility">Schädlingsbekämpfung</option>
+                <option data-profile="facility">Wäscherei / Textilreinigung</option>
+              </optgroup>
+              <optgroup label="Soziales & Organisationen">
+                <option data-profile="social">Verein / Verband</option>
+                <option data-profile="social">Sozialunternehmen</option>
+                <option data-profile="social">Gemeinnützige Organisation</option>
+                <option data-profile="social">Jugend- / Familienhilfe</option>
+              </optgroup>
+              <option value="Andere / nicht aufgeführte Branche" data-profile="general">Andere / nicht aufgeführte Branche</option>
+            </select>
+            <span class="text-small text-muted">Über 140 Branchen aus 15 Bereichen – falls deine nicht dabei ist, wähle „Andere“.</span>
+          </label>
+
+          <label class="up-field form-label up-span-2" for="industry_other" id="up-industry-other-wrap" hidden>
+            Eigene Branche eintragen <span class="up-required" aria-hidden="true">*</span>
+            <input class="form-control" id="industry_other" name="industry_other" type="text" placeholder="Deine genaue Branche">
+          </label>
+
           <label class="up-field form-label" for="person_name">
             Dein Name <span class="up-required" aria-hidden="true">*</span>
             <input class="form-control" id="person_name" name="person_name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
@@ -482,11 +696,6 @@
           <label class="up-field form-label" for="company">
             Unternehmen <span class="up-required" aria-hidden="true">*</span>
             <input class="form-control" id="company" name="company" type="text" autocomplete="organization" required placeholder="Name des Unternehmens">
-          </label>
-
-          <label class="up-field form-label" for="industry">
-            Branche
-            <input class="form-control" id="industry" name="industry" type="text" placeholder="z. B. Logistik, Gastronomie, Immobilien">
           </label>
 
           <label class="up-field form-label" for="location">
@@ -582,14 +791,57 @@
         <div class="up-actions">
           <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
           <div class="up-actions-right">
-            <button class="btn btn-primary" type="button" data-next>Weiter: Interviewthemen</button>
+            <button class="btn btn-primary" type="button" data-next>Weiter: Fragen zu deiner Branche</button>
           </div>
         </div>
       </section>
 
       <section class="up-step" data-step="3" hidden>
         <div>
-          <p class="up-kicker text-small">Schritt 3</p>
+          <p class="up-kicker text-small">Schritt 3 · Persönlich angepasst</p>
+          <h2>Fragen speziell für <span id="up-industry-title">deine Branche</span></h2>
+          <p class="text-muted">Diese Fragen werden automatisch passend zu deiner ausgewählten Branche zusammengestellt. Drei Kernfragen sind erforderlich; zwei Vertiefungen sind freiwillig.</p>
+        </div>
+
+        <div class="up-preview">
+          <strong id="up-industry-profile-label">Branchenspezifische Vorbereitung</strong>
+          <span class="text-small">Stichpunkte reichen. Im Interview können wir die Antworten gemeinsam vertiefen.</span>
+        </div>
+
+        <div class="up-grid" id="up-industry-questions">
+          <label class="up-field form-label up-span-2" for="industry_answer_1">
+            <span id="industry_question_1">Branchenspezifische Frage 1</span> <span class="up-required" aria-hidden="true">*</span>
+            <textarea class="form-control" id="industry_answer_1" name="industry_answer_1" rows="4" required placeholder="Deine Antwort in Stichpunkten …"></textarea>
+          </label>
+          <label class="up-field form-label up-span-2" for="industry_answer_2">
+            <span id="industry_question_2">Branchenspezifische Frage 2</span> <span class="up-required" aria-hidden="true">*</span>
+            <textarea class="form-control" id="industry_answer_2" name="industry_answer_2" rows="4" required placeholder="Deine Antwort in Stichpunkten …"></textarea>
+          </label>
+          <label class="up-field form-label up-span-2" for="industry_answer_3">
+            <span id="industry_question_3">Branchenspezifische Frage 3</span> <span class="up-required" aria-hidden="true">*</span>
+            <textarea class="form-control" id="industry_answer_3" name="industry_answer_3" rows="4" required placeholder="Deine Antwort in Stichpunkten …"></textarea>
+          </label>
+          <label class="up-field form-label" for="industry_answer_4">
+            <span id="industry_question_4">Branchenspezifische Frage 4</span>
+            <textarea class="form-control" id="industry_answer_4" name="industry_answer_4" rows="4" placeholder="Freiwillige Vertiefung …"></textarea>
+          </label>
+          <label class="up-field form-label" for="industry_answer_5">
+            <span id="industry_question_5">Branchenspezifische Frage 5</span>
+            <textarea class="form-control" id="industry_answer_5" name="industry_answer_5" rows="4" placeholder="Freiwillige Vertiefung …"></textarea>
+          </label>
+        </div>
+
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Weiter: Interviewthemen</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="4" hidden>
+        <div>
+          <p class="up-kicker text-small">Schritt 4</p>
           <h2>Worüber möchtest du sprechen?</h2>
           <p class="text-muted">Wähle die Themen aus, die im Gespräch vorkommen dürfen. Mehrfachauswahl möglich.</p>
         </div>
@@ -680,9 +932,9 @@
         </div>
       </section>
 
-      <section class="up-step" data-step="4" hidden>
+      <section class="up-step" data-step="5" hidden>
         <div>
-          <p class="up-kicker text-small">Schritt 4</p>
+          <p class="up-kicker text-small">Schritt 5</p>
           <h2>Damit du dich wohlfühlst</h2>
           <p class="text-muted">Lege fest, was wir vor dem Gespräch berücksichtigen sollen.</p>
         </div>
@@ -748,7 +1000,7 @@
         </div>
       </section>
 
-      <section class="up-step" data-step="5" hidden>
+      <section class="up-step" data-step="6" hidden>
         <div>
           <p class="up-kicker text-small">Fertig</p>
           <h2>Deine Vorbereitung ist komplett.</h2>
@@ -796,14 +1048,231 @@
       var stepLabel = root.querySelector("#up-step-label");
       var stepCount = root.querySelector("#up-step-count");
       var saveState = root.querySelector("#up-save-state");
+      var industrySelect = root.querySelector("#industry");
+      var industryOther = root.querySelector("#industry_other");
+      var industryOtherWrap = root.querySelector("#up-industry-other-wrap");
       var financeToggle = root.querySelector("#topic_finance");
       var financeFields = root.querySelector("#up-finance-fields");
       var review = root.querySelector("#up-review");
       var tailoredQuestions = root.querySelector("#up-tailored-questions");
       var status = root.querySelector("#up-status");
       var currentStep = 0;
-      var storageKey = "unternehmerpfad-vorabcheck-v1";
-      var stepNames = ["Überblick", "Unternehmen", "Dein Weg", "Interviewthemen", "Rahmen", "Zusammenfassung"];
+      var storageKey = "unternehmerpfad-vorabcheck-v2";
+      var stepNames = ["Überblick", "Unternehmen", "Dein Weg", "Branchenfragen", "Interviewthemen", "Rahmen", "Zusammenfassung"];
+
+      var industryProfileLabels = {
+        general: "Allgemeines Geschäftsmodell",
+        gastro: "Gastronomie",
+        food_production: "Lebensmittelproduktion",
+        auto_trade: "Fahrzeughandel",
+        auto_service: "Kfz-Service & Werkstatt",
+        mobility: "Mobilität & Verkehr",
+        construction: "Bau & Handwerk",
+        real_estate: "Immobilien",
+        retail: "Stationärer Handel",
+        ecommerce: "E-Commerce",
+        health: "Gesundheit & Medizin",
+        care: "Pflege & Betreuung",
+        beauty: "Beauty & Wellness",
+        fitness: "Fitness & Bewegung",
+        tech: "IT, Software & Digitales",
+        agency_media: "Agentur, Medien & Kreativwirtschaft",
+        logistics: "Logistik & Transport",
+        events: "Events & Entertainment",
+        hospitality: "Hotellerie & Tourismus",
+        finance: "Finanzen & Versicherungen",
+        professional: "Recht, Steuern & Beratung",
+        education: "Bildung & Coaching",
+        manufacturing: "Industrie & Produktion",
+        agriculture: "Landwirtschaft, Energie & Umwelt",
+        facility: "Gebäudeservice & Sicherheit",
+        social: "Soziales & Organisationen"
+      };
+
+      var industryQuestionSets = {
+        general: [
+          "Welches konkrete Problem löst dein Unternehmen für seine Kunden?",
+          "Wie gewinnst du neue Kunden und wodurch entsteht Vertrauen?",
+          "Welche Ressourcen oder Engpässe begrenzen dein Wachstum aktuell?",
+          "Wie bestimmst du deine Preise und woran erkennst du einen profitablen Auftrag?",
+          "Welche Veränderung in deiner Branche wird dein Geschäft am stärksten beeinflussen?"
+        ],
+        gastro: [
+          "Welches gastronomische Konzept verfolgst du und welche Gäste möchtest du erreichen?",
+          "Wie kalkulierst du Wareneinsatz, Portionsgrößen und Verkaufspreise?",
+          "Wie organisierst du Personal und Abläufe zu Stoßzeiten?",
+          "Wie stellst du gleichbleibende Qualität, Hygiene und Service sicher?",
+          "Welche Rolle spielen Saison, Lieferdienste und wiederkehrende Gäste für deinen Umsatz?"
+        ],
+        food_production: [
+          "Wie wählst du Rohstoffe und Lieferanten aus und sicherst ihre Qualität?",
+          "Wie planst du Produktionsmengen, Haltbarkeit und mögliche Ausschüsse?",
+          "Über welche Vertriebswege gelangen deine Produkte zum Kunden?",
+          "Welche Hygiene-, Kennzeichnungs- oder Zulassungsvorgaben sind besonders wichtig?",
+          "Wie gehst du mit schwankenden Rohstoff-, Energie- und Verpackungskosten um?"
+        ],
+        auto_trade: [
+          "Wie beschaffst du Fahrzeuge und woran erkennst du einen guten Einkauf?",
+          "Welche Kosten müssen zwischen Einkauf und Verkauf realistisch einkalkuliert werden?",
+          "Wie schaffst du Vertrauen bei Zustand, Historie, Gewährleistung und Preis?",
+          "Wie wirken sich Standzeiten und Finanzierung auf dein Geschäft aus?",
+          "Über welche Plattformen oder Kontakte verkaufst du die meisten Fahrzeuge?"
+        ],
+        auto_service: [
+          "Welche Leistungen sind für deinen Betrieb wirtschaftlich besonders wichtig?",
+          "Wie planst du Werkstattauslastung, Termine, Ersatzteile und Fachpersonal?",
+          "Wie erklärst du Kunden notwendige Reparaturen und schaffst Vertrauen bei den Kosten?",
+          "Welche Fehler oder Nacharbeiten können in deinem Betrieb besonders teuer werden?",
+          "Wie verändern E-Mobilität, Diagnose-Software und Fachkräftemangel dein Geschäft?"
+        ],
+        mobility: [
+          "Wie planst du Fahrzeuge, Personal und Auslastung im Tagesgeschäft?",
+          "Welche Kostenfaktoren beeinflussen die Rentabilität einer Fahrt oder Vermietung am stärksten?",
+          "Wie stellst du Sicherheit, Zuverlässigkeit und gesetzliche Vorgaben sicher?",
+          "Wie gehst du mit saisonalen Schwankungen, Leerzeiten oder kurzfristigen Ausfällen um?",
+          "Welche Rolle spielen Plattformen, Stammkunden und Kooperationen bei der Auftragsgewinnung?"
+        ],
+        construction: [
+          "Wie kalkulierst du Material, Arbeitszeit, Anfahrt und mögliche Nacharbeiten?",
+          "Wie steuerst du mehrere Baustellen, Termine und beteiligte Gewerke gleichzeitig?",
+          "Wie gehst du mit Materialpreisen, Lieferverzögerungen und ungeplanten Problemen um?",
+          "Woran erkennst du gute Mitarbeitende oder Nachunternehmer?",
+          "Welche Fehler können bei Angebot, Dokumentation oder Abnahme besonders teuer werden?"
+        ],
+        real_estate: [
+          "Wie gewinnst du neue Objekte oder Eigentümer als Kunden?",
+          "Wie bewertest du Immobilien und begründest einen realistischen Preis?",
+          "Wie schaffst du Vertrauen bei einer Entscheidung mit hohem finanziellem Risiko?",
+          "Wie wirken sich Zinsen, Regulierung und regionale Nachfrage auf dein Geschäft aus?",
+          "Welche Phase von Akquise bis Abschluss verursacht den größten Aufwand?"
+        ],
+        retail: [
+          "Wie entscheidest du, welche Produkte ins Sortiment kommen und welche wieder gehen?",
+          "Wie steuerst du Warenbestand, Einkauf und mögliche Abschriften?",
+          "Was muss dein stationäres Geschäft bieten, damit Kunden nicht nur online kaufen?",
+          "Welche Standorte, Zeiten oder Verkaufstage sind für dich besonders wichtig?",
+          "Wie kalkulierst du Handelsspanne, Rabatte und Lagerkosten?"
+        ],
+        ecommerce: [
+          "Über welche Kanäle gewinnst du Kunden und wie hoch ist der Aufwand pro Bestellung?",
+          "Wie wählst du Produkte aus und vermeidest zu hohe Lagerbestände?",
+          "Wie gehst du mit Retouren, Versandkosten und Lieferzeiten um?",
+          "Welche Kennzahlen beobachtest du regelmäßig, um profitable Verkäufe zu erkennen?",
+          "Wie machst du dich unabhängiger von Marktplätzen, Werbung und einzelnen Plattformen?"
+        ],
+        health: [
+          "Wie verbindest du fachliche Qualität mit einem wirtschaftlich tragfähigen Betrieb?",
+          "Wie organisierst du Termine, Wartezeiten, Dokumentation und Abrechnung?",
+          "Wie gewinnst und hältst du qualifiziertes Fachpersonal?",
+          "Welche gesetzlichen oder datenschutzrechtlichen Vorgaben prägen deinen Alltag?",
+          "Wie baust du langfristiges Vertrauen zu Patienten oder Kunden auf?"
+        ],
+        care: [
+          "Wie planst du Personal, Touren oder Betreuung so, dass Qualität und Wirtschaftlichkeit zusammenpassen?",
+          "Wie gehst du mit Fachkräftemangel und kurzfristigen Ausfällen um?",
+          "Wie stellst du verlässliche Dokumentation und gesetzliche Standards sicher?",
+          "Wie kommunizierst du mit Angehörigen in schwierigen Situationen?",
+          "Welche Leistung wird in deiner Branche häufig unterschätzt oder nicht ausreichend vergütet?"
+        ],
+        beauty: [
+          "Wie gewinnst du Stammkunden und sorgst für regelmäßige Folgetermine?",
+          "Wie kalkulierst du Behandlungszeit, Produkteinsatz und Verkaufspreise?",
+          "Welche Rolle spielen Social Media, Empfehlungen und sichtbare Ergebnisse?",
+          "Wie stellst du Hygiene, Beratung und gleichbleibende Qualität sicher?",
+          "Wie gehst du mit Terminausfällen und saisonalen Schwankungen um?"
+        ],
+        fitness: [
+          "Wie hilfst du Kunden dabei, langfristig motiviert und aktiv zu bleiben?",
+          "Welches Mitgliedschafts- oder Betreuungsmodell funktioniert für dich am besten?",
+          "Wie unterscheidest du dich von günstigen Studios und digitalen Trainingsangeboten?",
+          "Wie misst du Fortschritt und Qualität deiner Betreuung?",
+          "Wie steuerst du Auslastung, Kursplanung und wiederkehrende Umsätze?"
+        ],
+        tech: [
+          "Welches Problem löst dein Produkt technisch und wirtschaftlich besser als bestehende Lösungen?",
+          "Wie entwickelst du das Produkt weiter, ohne dich in Funktionen zu verlieren?",
+          "Wie gewinnst du die ersten Kunden und wie lang ist dein Verkaufsprozess?",
+          "Welche Rolle spielen wiederkehrende Umsätze, Support und Kundenbindung?",
+          "Wie gehst du mit Datenschutz, Sicherheit und technischer Abhängigkeit um?"
+        ],
+        agency_media: [
+          "Wie gewinnst du passende Kunden und erkennst früh, ob eine Zusammenarbeit funktioniert?",
+          "Wie definierst du Leistungen, Korrekturschleifen und klare Projektgrenzen?",
+          "Wie kalkulierst du kreative Arbeit, die Kunden oft nur schwer einschätzen können?",
+          "Wie machst du Ergebnisse oder den Erfolg deiner Arbeit messbar?",
+          "Wie reduzierst du die Abhängigkeit von einzelnen Großkunden oder Plattformen?"
+        ],
+        logistics: [
+          "Wie kalkulierst du Personal, Fahrzeuge, Strecke, Zeit und mögliche Zusatzleistungen?",
+          "Wie planst du Touren oder Aufträge, damit Fahrzeuge und Teams gut ausgelastet sind?",
+          "Wie gehst du mit Schäden, Verzögerungen und kurzfristigen Änderungen um?",
+          "Welche Rolle spielen Fuhrpark, Wartung und gesetzliche Vorgaben für deine Kosten?",
+          "Wie gewinnst du wiederkehrende Aufträge statt nur einzelner Buchungen?"
+        ],
+        events: [
+          "Wie gewinnst du Veranstaltungen, Künstler oder Auftraggeber und worüber verdienst du hauptsächlich?",
+          "Wie kalkulierst du Technik, Personal, Location, Sicherheit und mögliche Ausfälle?",
+          "Wie organisierst du viele Beteiligte unter hohem Zeitdruck?",
+          "Wie gehst du mit Genehmigungen, GEMA, Haftung oder kurzfristigen Absagen um?",
+          "Was macht ein Event für den Kunden erfolgreich und wie misst du das?"
+        ],
+        hospitality: [
+          "Wie steuerst du Auslastung und Preise in Haupt- und Nebensaison?",
+          "Über welche Buchungswege kommen Gäste und wie abhängig bist du von Plattformen?",
+          "Wie organisierst du Reinigung, Service und Personal bei wechselnder Auslastung?",
+          "Wie gehst du mit Bewertungen und Beschwerden öffentlich und intern um?",
+          "Welche Zusatzleistungen erhöhen den Umsatz pro Gast?"
+        ],
+        finance: [
+          "Wie gewinnst du Vertrauen, bevor Kunden dir sensible finanzielle Entscheidungen überlassen?",
+          "Wie erklärst du komplexe Produkte, Risiken und Kosten verständlich?",
+          "Wie setzt sich deine Vergütung zusammen und wie gehst du transparent damit um?",
+          "Welche Regulierung und Dokumentationspflicht prägt deinen Alltag am stärksten?",
+          "Wie entwickelst du langfristige Kundenbeziehungen statt einmaliger Abschlüsse?"
+        ],
+        professional: [
+          "Wie gewinnst du Mandanten oder Kunden, bei denen deine Expertise wirklich passt?",
+          "Wie kalkulierst du Zeit, Verantwortung und Haftungsrisiko in deinen Leistungen?",
+          "Wie standardisierst du wiederkehrende Aufgaben, ohne die individuelle Beratung zu verlieren?",
+          "Wie gehst du mit Fristen, Dokumentation und vertraulichen Daten um?",
+          "Wie machst du den Wert deiner Arbeit sichtbar, bevor das Ergebnis vollständig feststeht?"
+        ],
+        education: [
+          "Welches konkrete Lernergebnis oder welche Veränderung versprichst du deinen Teilnehmern?",
+          "Wie entwickelst du Inhalte und hältst sie fachlich aktuell?",
+          "Wie misst du Lernerfolg, Zufriedenheit und langfristige Wirkung?",
+          "Wie gewinnst du Teilnehmer und sorgst dafür, dass sie Angebote abschließen?",
+          "Wie skalierst du dein Wissen, ohne die persönliche Qualität zu verlieren?"
+        ],
+        manufacturing: [
+          "Wie planst du Kapazitäten, Material und Liefertermine?",
+          "Welche Kennzahlen zeigen dir Produktivität, Qualität und Ausschuss?",
+          "Wie gehst du mit Maschinenstillstand, Lieferproblemen und schwankenden Kosten um?",
+          "Wie sicherst du Qualität und Rückverfolgbarkeit deiner Produkte?",
+          "Welche Investition oder Automatisierung würde deinen Betrieb am stärksten verändern?"
+        ],
+        agriculture: [
+          "Wie beeinflussen Wetter, Saison und Natur deine Planung und Einnahmen?",
+          "Wie kalkulierst du bei schwankenden Energie-, Futter-, Rohstoff- oder Marktpreisen?",
+          "Welche gesetzlichen Vorgaben oder Förderprogramme sind besonders wichtig?",
+          "Wie vermarktest du deine Leistung oder Produkte und wie abhängig bist du von Abnehmern?",
+          "Welche nachhaltige oder technische Veränderung bietet die größte Chance für deinen Betrieb?"
+        ],
+        facility: [
+          "Wie kalkulierst du Personal, Zeit, Material und Anfahrt pro Auftrag oder Objekt?",
+          "Wie kontrollierst du Qualität, wenn mehrere Mitarbeitende an verschiedenen Orten arbeiten?",
+          "Wie gehst du mit kurzfristigen Ausfällen und schwer planbaren Einsätzen um?",
+          "Welche Verträge oder wiederkehrenden Aufträge geben deinem Geschäft Stabilität?",
+          "Wie gewinnst und hältst du zuverlässige Mitarbeitende in deiner Branche?"
+        ],
+        social: [
+          "Welches gesellschaftliche Problem möchtest du konkret lösen?",
+          "Wie misst du Wirkung, auch wenn Erfolg nicht nur finanziell sichtbar ist?",
+          "Wie finanzierst du deine Arbeit und wie abhängig bist du von Förderungen oder Spenden?",
+          "Wie gewinnst du Mitarbeitende, Ehrenamtliche oder Unterstützer?",
+          "Wie verbindest du soziale Ziele mit professionellen und wirtschaftlichen Strukturen?"
+        ]
+      };
 
       var labels = {
         person_name: "Name",
@@ -821,6 +1290,11 @@
         challenge: "Größte Herausforderung",
         lesson: "Wichtigste Lektion",
         values: "Werte",
+        industry_answer_1: "Branchenfrage 1",
+        industry_answer_2: "Branchenfrage 2",
+        industry_answer_3: "Branchenfrage 3",
+        industry_answer_4: "Branchenfrage 4",
+        industry_answer_5: "Branchenfrage 5",
         topics: "Gewünschte Interviewthemen",
         finance_openness: "Offenheit bei Zahlen",
         revenue_range: "Umsatzgröße",
@@ -839,9 +1313,61 @@
       var groups = [
         { title: "Person & Unternehmen", fields: ["person_name", "role", "company", "industry", "location", "founded", "team_size", "website", "company_short"], step: 1 },
         { title: "Unternehmerischer Weg", fields: ["motivation", "milestone", "difference", "challenge", "lesson", "values"], step: 2 },
-        { title: "Interviewthemen", fields: ["topics", "finance_openness", "revenue_range", "start_capital", "finance_note", "focus_topic"], step: 3 },
-        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 4 }
+        { title: "Fragen zur Branche", fields: ["industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"], step: 3 },
+        { title: "Interviewthemen", fields: ["topics", "finance_openness", "revenue_range", "start_capital", "finance_note", "focus_topic"], step: 4 },
+        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 5 }
       ];
+
+      function getSelectedIndustryName() {
+        if (industrySelect.value === "Andere / nicht aufgeführte Branche") {
+          return industryOther.value.trim() || "Andere Branche";
+        }
+        return industrySelect.value || "";
+      }
+
+      function getSelectedIndustryProfile() {
+        var selectedOption = industrySelect.options[industrySelect.selectedIndex];
+        return selectedOption && selectedOption.getAttribute("data-profile") || "general";
+      }
+
+      function getIndustryQuestions() {
+        return industryQuestionSets[getSelectedIndustryProfile()] || industryQuestionSets.general;
+      }
+
+      function getFieldLabel(name) {
+        if (name.indexOf("industry_answer_") === 0) {
+          var answerField = root.querySelector("[name=\"" + name + "\"]");
+          return answerField && answerField.getAttribute("data-question") || labels[name];
+        }
+        return labels[name] || name;
+      }
+
+      function updateIndustryOtherVisibility() {
+        var needsOther = industrySelect.value === "Andere / nicht aufgeführte Branche";
+        industryOtherWrap.hidden = !needsOther;
+        industryOther.required = needsOther;
+        if (!needsOther) industryOther.setCustomValidity("");
+      }
+
+      function renderIndustryQuestions(clearChangedProfile) {
+        var profile = getSelectedIndustryProfile();
+        var previousProfile = form.getAttribute("data-industry-profile");
+        var questions = getIndustryQuestions();
+        var industryName = getSelectedIndustryName() || "deine Branche";
+        if (clearChangedProfile && previousProfile && previousProfile !== profile) {
+          for (var clearIndex = 1; clearIndex <= 5; clearIndex += 1) {
+            root.querySelector("#industry_answer_" + clearIndex).value = "";
+          }
+        }
+        form.setAttribute("data-industry-profile", profile);
+        root.querySelector("#up-industry-title").textContent = industryName;
+        root.querySelector("#up-industry-profile-label").textContent = "Fragenprofil: " + (industryProfileLabels[profile] || industryProfileLabels.general);
+        questions.forEach(function (question, index) {
+          var number = index + 1;
+          root.querySelector("#industry_question_" + number).textContent = question;
+          root.querySelector("#industry_answer_" + number).setAttribute("data-question", question);
+        });
+      }
 
       function getNamedValue(name) {
         var fields = Array.prototype.slice.call(form.querySelectorAll("[name=\"" + name + "\"]"));
@@ -861,6 +1387,7 @@
         Object.keys(labels).forEach(function (name) {
           data[name] = getNamedValue(name);
         });
+        data.industry = getSelectedIndustryName();
         data.confirm_preparation = root.querySelector("#confirm_preparation").checked;
         return data;
       }
@@ -923,7 +1450,8 @@
         var progress = currentStep === 0 ? 0 : (currentStep / (steps.length - 1)) * 100;
         progressFill.style.width = progress + "%";
         stepLabel.textContent = stepNames[currentStep];
-        stepCount.textContent = currentStep === 0 ? "Start" : (currentStep === steps.length - 1 ? "Abgeschlossen" : "Schritt " + currentStep + " von 4");
+        stepCount.textContent = currentStep === 0 ? "Start" : (currentStep === steps.length - 1 ? "Abgeschlossen" : "Schritt " + currentStep + " von 5");
+        if (currentStep === 3) renderIndustryQuestions(false);
         if (currentStep === steps.length - 1) buildReview();
         saveDraft();
         var heading = steps[currentStep].querySelector("h2");
@@ -968,7 +1496,7 @@
         var lines = [];
         group.fields.forEach(function (name) {
           var value = data[name];
-          if (value) lines.push(labels[name] + ": " + value);
+          if (value) lines.push(getFieldLabel(name) + ": " + value);
         });
         return lines.length ? lines.join("\n\n") : "Keine Angaben";
       }
@@ -993,7 +1521,9 @@
             "Welche Lektion möchtest du anderen mitgeben?"
           ];
         }
-        chosen = chosen.slice(0, 5);
+        var branchQuestion = getIndustryQuestions()[0];
+        if (branchQuestion) chosen.unshift(branchQuestion);
+        chosen = chosen.filter(function (question, index, all) { return all.indexOf(question) === index; }).slice(0, 5);
         tailoredQuestions.innerHTML = chosen.map(function (question) { return "<li>" + escapeText(question) + "</li>"; }).join("");
       }
 
@@ -1043,11 +1573,15 @@
             fields: ["motivation", "milestone", "difference", "challenge", "lesson", "values"]
           },
           {
-            title: "3 · INTERVIEWTHEMEN & ZAHLEN",
+            title: "3 · FRAGEN ZUR BRANCHE",
+            fields: ["industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"]
+          },
+          {
+            title: "4 · INTERVIEWTHEMEN & ZAHLEN",
             fields: ["topics", "finance_openness", "revenue_range", "start_capital", "finance_note", "focus_topic"]
           },
           {
-            title: "4 · RAHMEN & KONTAKT",
+            title: "5 · RAHMEN & KONTAKT",
             fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"]
           }
         ];
@@ -1056,7 +1590,7 @@
         sections.forEach(function (section) {
           addEmailRow(container, section.title, "────────────────────────");
           section.fields.forEach(function (name) {
-            if (data[name]) addEmailRow(container, labels[name], data[name]);
+            if (data[name]) addEmailRow(container, getFieldLabel(name), data[name]);
           });
         });
         addEmailRow(container, "Hinweis", "Die Angaben dienen der Interviewvorbereitung und sind noch keine Veröffentlichungsfreigabe.");
@@ -1108,14 +1642,19 @@
         status.textContent = "Textdatei gespeichert.";
       }
 
-      form.addEventListener("input", function () {
+      form.addEventListener("input", function (event) {
         saveDraft();
         updateFinanceVisibility();
+        if (event.target === industryOther) renderIndustryQuestions(false);
       });
 
-      form.addEventListener("change", function () {
+      form.addEventListener("change", function (event) {
         saveDraft();
         updateFinanceVisibility();
+        if (event.target === industrySelect) {
+          updateIndustryOtherVisibility();
+          renderIndustryQuestions(true);
+        }
       });
 
       form.addEventListener("submit", function (event) {
@@ -1169,6 +1708,8 @@
         form.reset();
         try { localStorage.removeItem(storageKey); } catch (error) {}
         updateFinanceVisibility();
+        updateIndustryOtherVisibility();
+        renderIndustryQuestions(true);
         status.textContent = "";
         showStep(0);
         saveState.textContent = "Neuer Entwurf";
@@ -1176,6 +1717,8 @@
 
       restoreDraft();
       updateFinanceVisibility();
+      updateIndustryOtherVisibility();
+      renderIndustryQuestions(false);
       showStep(currentStep);
 
       window.addEventListener("pageshow", function () {
