@@ -3,51 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="dark">
   <meta name="description" content="Vorbereitung auf dein Interview mit Unternehmerpfad">
   <title>Interview-Vorbereitung | Unternehmerpfad</title>
   <style>
-    html, body { min-height: 100%; margin: 0; background: #f3f6f4; }
-    body { padding: clamp(.35rem, 2vw, 1.5rem); }
+    html, body { min-height: 100%; margin: 0; background: #050806; color-scheme: dark; }
+    body { padding: 0; }
   </style>
 </head>
 <body>
-<section id="unternehmer-vorabcheck" aria-label="Unternehmerpfad Vorab-Check">
+<section id="unternehmer-vorabcheck" aria-label="Unternehmerpfad Interview-Vorbereitung">
   <style>
     #unternehmer-vorabcheck {
-      --up-gap: 1rem;
-      --background: #f3f6f4;
-      --foreground: #17211d;
-      --card: #ffffff;
-      --card-foreground: #17211d;
-      --primary: #013328;
-      --primary-foreground: #ffffff;
-      --muted: #e8eeeb;
-      --muted-foreground: #52615a;
-      --accent: #dcebe5;
-      --accent-foreground: #123c32;
-      --destructive: #b42318;
-      --border: #d2ddd7;
-      --input: #b9c8c1;
-      --ring: #1f6a57;
-      --viz-series-1: #1f6a57;
-      color: var(--foreground);
-      background: var(--background);
-      line-height: 1.55;
+      --background: #050806;
+      --surface: #0a100d;
+      --card: #0d1511;
+      --card-strong: #111c17;
+      --foreground: #f2f7f4;
+      --muted-foreground: #93a69d;
+      --primary: #7bf0b4;
+      --primary-deep: #123f2c;
+      --primary-foreground: #062014;
+      --border: #203028;
+      --border-strong: #344a3f;
+      --input: #293a31;
+      --destructive: #ff7f7f;
+      --ring: #7bf0b4;
       width: 100%;
-      min-height: 100%;
-      padding: clamp(.75rem, 3vw, 2rem);
-      border-radius: 1rem;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      color: var(--foreground);
+      background:
+        radial-gradient(circle at 12% -10%, rgba(46, 157, 104, .18), transparent 32rem),
+        radial-gradient(circle at 92% 20%, rgba(31, 95, 69, .12), transparent 28rem),
+        var(--background);
+      font-family: Inter, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      padding: clamp(1rem, 3vw, 2.5rem);
     }
 
-    #unternehmer-vorabcheck * {
-      box-sizing: border-box;
-    }
+    #unternehmer-vorabcheck * { box-sizing: border-box; }
 
     #unternehmer-vorabcheck .up-shell {
+      width: min(100%, 70rem);
+      margin: 0 auto;
       display: grid;
-      gap: 1.25rem;
+      gap: 1.1rem;
     }
 
     #unternehmer-vorabcheck .up-brand-row,
@@ -59,167 +60,137 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: .75rem;
+      gap: .8rem;
     }
 
     #unternehmer-vorabcheck .up-brand {
       display: inline-flex;
       align-items: center;
-      gap: .65rem;
-      min-height: 4.25rem;
-      padding: .45rem .9rem .45rem .55rem;
-      border-radius: .85rem;
-      color: var(--primary-foreground);
-      background: var(--primary);
-      font-weight: 500;
-      letter-spacing: .06em;
+      gap: .8rem;
+      color: var(--foreground);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .18em;
     }
 
     #unternehmer-vorabcheck .up-brand-logo {
       display: block;
-      width: 3.4rem;
-      height: 3.4rem;
+      width: 3rem;
+      height: 3rem;
       object-fit: contain;
+      padding: .4rem;
+      border: 1px solid var(--border);
+      border-radius: .85rem;
+      background: #103525;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, .25);
     }
 
-    #unternehmer-vorabcheck .btn {
+    #unternehmer-vorabcheck .text-small { font-size: .86rem; }
+    #unternehmer-vorabcheck .text-muted { color: var(--muted-foreground); }
+
+    #unternehmer-vorabcheck .up-saved {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-height: 2.75rem;
-      padding: .65rem 1rem;
+      gap: .5rem;
+      padding: .45rem .7rem;
       border: 1px solid var(--border);
-      border-radius: .6rem;
-      color: var(--foreground);
-      background: var(--background);
-      font: inherit;
-      font-weight: 500;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    #unternehmer-vorabcheck .btn:hover {
-      background: var(--accent);
-      color: var(--accent-foreground);
-    }
-
-    #unternehmer-vorabcheck .btn:focus-visible,
-    #unternehmer-vorabcheck .form-control:focus-visible,
-    #unternehmer-vorabcheck .form-select:focus-visible,
-    #unternehmer-vorabcheck .form-check-input:focus-visible {
-      outline: 3px solid color-mix(in srgb, var(--ring) 40%, transparent);
-      outline-offset: 2px;
-    }
-
-    #unternehmer-vorabcheck .btn-primary {
-      border-color: var(--primary);
-      color: var(--primary-foreground);
-      background: var(--primary);
-    }
-
-    #unternehmer-vorabcheck .btn-primary:hover {
-      color: var(--primary-foreground);
-      background: color-mix(in srgb, var(--primary) 88%, var(--foreground));
-    }
-
-    #unternehmer-vorabcheck .btn-ghost {
-      background: transparent;
-    }
-
-    #unternehmer-vorabcheck .btn:disabled {
-      cursor: wait;
-      opacity: .65;
-    }
-
-    #unternehmer-vorabcheck .form-control,
-    #unternehmer-vorabcheck .form-select {
-      width: 100%;
-      min-height: 2.75rem;
-      padding: .7rem .8rem;
-      border: 1px solid var(--input);
-      border-radius: .55rem;
-      color: var(--foreground);
-      background: var(--background);
-      font: inherit;
-    }
-
-    #unternehmer-vorabcheck textarea.form-control {
-      min-height: 6rem;
-      resize: vertical;
-    }
-
-    #unternehmer-vorabcheck .form-check {
-      display: flex;
-      align-items: flex-start;
-      gap: .65rem;
-    }
-
-    #unternehmer-vorabcheck .form-check-input {
-      flex: 0 0 auto;
-      width: 1.1rem;
-      height: 1.1rem;
-      margin-top: .2rem;
-      accent-color: var(--primary);
-    }
-
-    #unternehmer-vorabcheck .text-small {
-      font-size: .875rem;
-    }
-
-    #unternehmer-vorabcheck .text-muted {
+      border-radius: 999px;
       color: var(--muted-foreground);
+      background: rgba(10, 16, 13, .72);
+    }
+
+    #unternehmer-vorabcheck .up-saved::before {
+      content: "";
+      width: .46rem;
+      height: .46rem;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 .22rem rgba(123, 240, 180, .1);
     }
 
     #unternehmer-vorabcheck .up-progress-wrap {
       display: grid;
-      gap: .45rem;
+      gap: .55rem;
+      padding: .85rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: .9rem;
+      background: rgba(10, 16, 13, .78);
+      backdrop-filter: blur(14px);
     }
 
+    #unternehmer-vorabcheck .up-progress-row { color: var(--muted-foreground); }
+    #unternehmer-vorabcheck #up-step-label { color: var(--foreground); font-weight: 600; }
+
     #unternehmer-vorabcheck .up-progress-track {
-      height: .55rem;
+      height: .24rem;
       overflow: hidden;
       border-radius: 999px;
-      background: var(--muted);
+      background: #18231e;
     }
 
     #unternehmer-vorabcheck .up-progress-fill {
       width: 0;
       height: 100%;
       border-radius: inherit;
-      background: var(--primary);
-      transition: width .25s ease;
+      background: linear-gradient(90deg, #3dc786, var(--primary));
+      box-shadow: 0 0 18px rgba(123, 240, 180, .35);
+      transition: width .3s ease;
     }
 
     #unternehmer-vorabcheck .up-panel {
       display: grid;
-      gap: 1.25rem;
-      padding: clamp(1rem, 3vw, 2rem);
+      gap: 1.5rem;
+      padding: clamp(1.2rem, 4vw, 3rem);
       border: 1px solid var(--border);
-      border-radius: 1rem;
-      background: var(--card);
-      color: var(--card-foreground);
+      border-radius: 1.35rem;
+      color: var(--foreground);
+      background: linear-gradient(145deg, rgba(17, 28, 23, .94), rgba(9, 15, 12, .98));
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .34);
+      overflow: hidden;
     }
 
     #unternehmer-vorabcheck .up-step[hidden],
-    #unternehmer-vorabcheck [hidden] {
-      display: none !important;
-    }
+    #unternehmer-vorabcheck [hidden] { display: none !important; }
 
     #unternehmer-vorabcheck .up-step {
       display: grid;
-      gap: 1.25rem;
+      gap: 1.5rem;
+      animation: up-fade .24s ease both;
+    }
+
+    @keyframes up-fade {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     #unternehmer-vorabcheck .up-step h2,
     #unternehmer-vorabcheck .up-step h3,
-    #unternehmer-vorabcheck .up-step p {
-      margin: 0;
+    #unternehmer-vorabcheck .up-step p { margin: 0; }
+
+    #unternehmer-vorabcheck .up-step h2 {
+      max-width: 20ch;
+      margin-top: .3rem;
+      font-size: clamp(1.9rem, 4.6vw, 3.4rem);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+      font-weight: 650;
+    }
+
+    #unternehmer-vorabcheck .up-step h3 {
+      font-size: 1rem;
+      letter-spacing: -.01em;
+    }
+
+    #unternehmer-vorabcheck .up-step > div:first-child > p:last-child {
+      max-width: 48rem;
+      margin-top: .65rem;
     }
 
     #unternehmer-vorabcheck .up-kicker {
-      color: var(--muted-foreground);
-      font-weight: 500;
-      letter-spacing: .04em;
+      color: var(--primary);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
       text-transform: uppercase;
     }
 
@@ -232,26 +203,186 @@
     #unternehmer-vorabcheck .up-field {
       display: grid;
       align-content: start;
-      gap: .4rem;
+      gap: .48rem;
       min-width: 0;
+      color: #dfe9e3;
+      font-size: .91rem;
+      font-weight: 560;
     }
 
-    #unternehmer-vorabcheck .up-span-2 {
-      grid-column: 1 / -1;
+    #unternehmer-vorabcheck .up-field .text-small { font-weight: 400; }
+    #unternehmer-vorabcheck .up-span-2 { grid-column: 1 / -1; }
+
+    #unternehmer-vorabcheck .form-control,
+    #unternehmer-vorabcheck .form-select {
+      width: 100%;
+      min-height: 3.15rem;
+      padding: .78rem .9rem;
+      border: 1px solid var(--input);
+      border-radius: .72rem;
+      color: var(--foreground);
+      background: #0a120e;
+      font: inherit;
+      font-weight: 430;
+      line-height: 1.35;
+      transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
     }
+
+    #unternehmer-vorabcheck .form-control:hover,
+    #unternehmer-vorabcheck .form-select:hover { border-color: var(--border-strong); }
+
+    #unternehmer-vorabcheck .form-control::placeholder { color: #687a70; opacity: 1; }
+    #unternehmer-vorabcheck .form-select option,
+    #unternehmer-vorabcheck .form-select optgroup { background: #0a120e; color: var(--foreground); }
+
+    #unternehmer-vorabcheck textarea.form-control {
+      min-height: 6.4rem;
+      resize: vertical;
+    }
+
+    #unternehmer-vorabcheck .btn:focus-visible,
+    #unternehmer-vorabcheck .form-control:focus-visible,
+    #unternehmer-vorabcheck .form-select:focus-visible,
+    #unternehmer-vorabcheck .form-check-input:focus-visible {
+      outline: none;
+      border-color: var(--ring);
+      box-shadow: 0 0 0 .22rem rgba(123, 240, 180, .13);
+    }
+
+    #unternehmer-vorabcheck .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: .72rem 1.05rem;
+      border: 1px solid var(--border-strong);
+      border-radius: .72rem;
+      color: var(--foreground);
+      background: #101914;
+      font: inherit;
+      font-size: .92rem;
+      font-weight: 650;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .16s ease, border-color .16s ease, background .16s ease;
+    }
+
+    #unternehmer-vorabcheck .btn:hover {
+      border-color: #4f695c;
+      background: #16231d;
+      transform: translateY(-1px);
+    }
+
+    #unternehmer-vorabcheck .btn-primary {
+      border-color: var(--primary);
+      color: var(--primary-foreground);
+      background: var(--primary);
+      box-shadow: 0 10px 28px rgba(58, 197, 132, .16);
+    }
+
+    #unternehmer-vorabcheck .btn-primary:hover {
+      border-color: #a7f8cf;
+      color: var(--primary-foreground);
+      background: #94f5c4;
+    }
+
+    #unternehmer-vorabcheck .btn-ghost { background: transparent; color: var(--muted-foreground); }
+    #unternehmer-vorabcheck .btn:disabled { cursor: wait; opacity: .58; transform: none; }
+
+    #unternehmer-vorabcheck .form-check {
+      display: flex;
+      align-items: flex-start;
+      gap: .7rem;
+      color: var(--muted-foreground);
+    }
+
+    #unternehmer-vorabcheck .form-check-input {
+      flex: 0 0 auto;
+      width: 1.05rem;
+      height: 1.05rem;
+      margin: .2rem 0 0;
+      accent-color: var(--primary);
+    }
+
+    #unternehmer-vorabcheck .up-choice-section {
+      min-width: 0;
+      margin: 0;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: .9rem;
+      background: rgba(5, 8, 6, .28);
+    }
+
+    #unternehmer-vorabcheck .up-choice-section legend {
+      padding: 0 .35rem;
+      color: #dfe9e3;
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    #unternehmer-vorabcheck .up-choice-hint {
+      display: block;
+      margin: -.1rem 0 .8rem;
+      color: var(--muted-foreground);
+      font-size: .8rem;
+    }
+
+    #unternehmer-vorabcheck .up-choice-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .55rem;
+    }
+
+    #unternehmer-vorabcheck .up-choice-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .48rem;
+      min-height: 2.45rem;
+      padding: .55rem .72rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #b9c8c0;
+      background: #0b130f;
+      font-size: .84rem;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: border-color .16s ease, color .16s ease, background .16s ease;
+    }
+
+    #unternehmer-vorabcheck .up-choice-chip:hover {
+      border-color: var(--border-strong);
+      color: var(--foreground);
+    }
+
+    #unternehmer-vorabcheck .up-choice-chip:has(input:checked) {
+      border-color: #4ec98a;
+      color: #dff9eb;
+      background: rgba(40, 139, 91, .18);
+    }
+
+    #unternehmer-vorabcheck .up-choice-chip input {
+      width: .95rem;
+      height: .95rem;
+      margin: 0;
+      accent-color: var(--primary);
+    }
+
+    #unternehmer-vorabcheck .up-other-field { margin-top: .75rem; }
 
     #unternehmer-vorabcheck .up-note,
     #unternehmer-vorabcheck .up-callout,
     #unternehmer-vorabcheck .up-preview,
     #unternehmer-vorabcheck .up-review-block {
       border: 1px solid var(--border);
-      border-radius: .8rem;
+      border-radius: .9rem;
       padding: 1rem;
+      background: rgba(5, 8, 6, .3);
     }
 
-    #unternehmer-vorabcheck .up-note,
-    #unternehmer-vorabcheck .up-callout {
-      background: color-mix(in srgb, var(--muted) 55%, transparent);
+    #unternehmer-vorabcheck .up-callout,
+    #unternehmer-vorabcheck .up-preview {
+      border-color: #284738;
+      background: linear-gradient(135deg, rgba(35, 112, 75, .16), rgba(8, 15, 11, .45));
     }
 
     #unternehmer-vorabcheck .up-overview {
@@ -262,87 +393,59 @@
 
     #unternehmer-vorabcheck .up-overview-item {
       display: grid;
-      gap: .25rem;
+      gap: .3rem;
       padding: 1rem;
-      border-radius: .75rem;
-      background: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: .85rem;
+      background: rgba(7, 12, 9, .56);
       color: var(--muted-foreground);
     }
 
-    #unternehmer-vorabcheck .up-overview-item strong {
-      color: var(--foreground);
-      font-weight: 500;
-    }
+    #unternehmer-vorabcheck .up-overview-item strong { color: var(--foreground); font-weight: 620; }
 
     #unternehmer-vorabcheck .up-check-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: .7rem 1rem;
+      gap: .75rem;
     }
 
     #unternehmer-vorabcheck .up-check-card {
       display: flex;
       align-items: flex-start;
-      gap: .65rem;
-      padding: .85rem;
+      gap: .68rem;
+      padding: .9rem;
       border: 1px solid var(--border);
-      border-radius: .7rem;
-      background: var(--background);
+      border-radius: .82rem;
+      background: #0a120e;
       color: var(--foreground);
+      cursor: pointer;
+      transition: border-color .16s ease, background .16s ease;
     }
 
-    #unternehmer-vorabcheck .up-check-card input {
-      margin-top: .2rem;
-    }
-
-    #unternehmer-vorabcheck .up-check-copy {
-      display: grid;
-      gap: .15rem;
-    }
-
-    #unternehmer-vorabcheck .up-check-copy strong {
-      font-weight: 500;
-    }
+    #unternehmer-vorabcheck .up-check-card:hover { border-color: var(--border-strong); }
+    #unternehmer-vorabcheck .up-check-card:has(input:checked) { border-color: #4ec98a; background: rgba(40, 139, 91, .13); }
+    #unternehmer-vorabcheck .up-check-card input { margin-top: .2rem; }
+    #unternehmer-vorabcheck .up-check-copy { display: grid; gap: .15rem; }
+    #unternehmer-vorabcheck .up-check-copy strong { font-weight: 600; }
 
     #unternehmer-vorabcheck .up-question-list,
     #unternehmer-vorabcheck .up-flow-list {
-      margin: 0;
+      margin: .75rem 0 0;
       padding-left: 1.25rem;
       display: grid;
       gap: .55rem;
+      color: #c9d6cf;
     }
 
-    #unternehmer-vorabcheck .up-preview {
-      display: grid;
-      gap: .75rem;
-      background: color-mix(in srgb, var(--accent) 45%, transparent);
-      color: var(--accent-foreground);
-    }
-
-    #unternehmer-vorabcheck .up-review {
-      display: grid;
-      gap: .8rem;
-    }
-
-    #unternehmer-vorabcheck .up-review-block {
-      display: grid;
-      gap: .65rem;
-      background: var(--background);
-      color: var(--foreground);
-    }
-
-    #unternehmer-vorabcheck .up-review-content {
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-    }
-
-    #unternehmer-vorabcheck .up-status {
-      min-height: 1.5em;
-      color: var(--muted-foreground);
-    }
+    #unternehmer-vorabcheck .up-preview { display: grid; gap: .25rem; color: #d8eee2; }
+    #unternehmer-vorabcheck .up-review { display: grid; gap: .8rem; }
+    #unternehmer-vorabcheck .up-review-block { display: grid; gap: .7rem; }
+    #unternehmer-vorabcheck .up-review-content { white-space: pre-wrap; overflow-wrap: anywhere; color: #b6c6bd; }
+    #unternehmer-vorabcheck .up-status { min-height: 1.5em; color: var(--muted-foreground); }
 
     #unternehmer-vorabcheck .up-actions {
-      padding-top: .25rem;
+      margin-top: .2rem;
+      padding-top: 1.15rem;
       border-top: 1px solid var(--border);
     }
 
@@ -353,50 +456,24 @@
       margin-left: auto;
     }
 
-    #unternehmer-vorabcheck .up-required {
-      color: var(--destructive);
-    }
+    #unternehmer-vorabcheck .up-required { color: var(--destructive); }
 
-    #unternehmer-vorabcheck .up-saved {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      color: var(--muted-foreground);
-    }
-
-    #unternehmer-vorabcheck .up-saved::before {
-      content: "";
-      width: .5rem;
-      height: .5rem;
-      border-radius: 50%;
-      background: var(--viz-series-1);
-    }
-
-    @media (max-width: 620px) {
+    @media (max-width: 700px) {
+      #unternehmer-vorabcheck { padding: .75rem; }
+      #unternehmer-vorabcheck .up-panel { padding: 1.2rem; border-radius: 1rem; }
       #unternehmer-vorabcheck .up-grid,
       #unternehmer-vorabcheck .up-check-grid,
-      #unternehmer-vorabcheck .up-overview {
-        grid-template-columns: 1fr;
-      }
-
-      #unternehmer-vorabcheck .up-span-2 {
-        grid-column: auto;
-      }
-
+      #unternehmer-vorabcheck .up-overview { grid-template-columns: 1fr; }
+      #unternehmer-vorabcheck .up-span-2 { grid-column: auto; }
+      #unternehmer-vorabcheck .up-brand span { font-size: .7rem; }
       #unternehmer-vorabcheck .up-actions-right,
-      #unternehmer-vorabcheck .up-actions .btn {
-        width: 100%;
-      }
-
-      #unternehmer-vorabcheck .up-actions-right .btn {
-        flex: 1 1 auto;
-      }
+      #unternehmer-vorabcheck .up-actions .btn { width: 100%; }
+      #unternehmer-vorabcheck .up-actions-right .btn { flex: 1 1 auto; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      #unternehmer-vorabcheck .up-progress-fill {
-        transition: none;
-      }
+      #unternehmer-vorabcheck .up-progress-fill { transition: none; }
+      #unternehmer-vorabcheck .up-step { animation: none; }
     }
   </style>
 
@@ -427,12 +504,12 @@
       <section class="up-step" data-step="0">
         <p class="up-kicker text-small">Vorbereitung auf dein Gespräch</p>
         <h2>Dein Weg steht im Mittelpunkt.</h2>
-        <p>Dieser kurze Vorab-Check hilft uns, dich und dein Unternehmen kennenzulernen. Gleichzeitig siehst du, welche Themen im Interview auf dich zukommen können. Du musst nichts auswendig lernen.</p>
+        <p>Mit dieser Vorbereitung lernen wir dich, deinen Weg und dein Unternehmen besser kennen. Gleichzeitig weißt du schon vor dem Gespräch, welche Themen auf dich zukommen können. Du musst nichts auswendig lernen.</p>
 
-        <div class="up-overview" aria-label="Überblick zum Vorab-Check">
+        <div class="up-overview" aria-label="Überblick zur Interview-Vorbereitung">
           <div class="up-overview-item">
-            <strong>8–12 Minuten</strong>
-            <span class="text-small">für den Vorab-Check</span>
+            <strong>10–15 Minuten</strong>
+            <span class="text-small">für die Vorbereitung</span>
           </div>
           <div class="up-overview-item">
             <strong>Freiwillige Angaben</strong>
@@ -448,15 +525,15 @@
           <h3>So läuft es ab</h3>
           <ol class="up-flow-list">
             <li>Du beantwortest nur die Punkte, die du teilen möchtest.</li>
-            <li>Wir bereiten daraus ein persönliches Gespräch vor.</li>
-            <li>Vor dem Interview klären wir Ablauf, Aufnahme und sensible Themen gemeinsam.</li>
+            <li>Das persönliche oder digitale Interview dauert etwa 45–90 Minuten.</li>
+            <li>Vor der Veröffentlichung erhältst du das fertige Interview zur Freigabe.</li>
           </ol>
         </div>
 
         <div class="up-actions">
-          <span class="text-small text-muted">Deine Eingaben werden automatisch als lokaler Entwurf gespeichert.</span>
+          <span class="text-small text-muted">Deine Eingaben werden laufend auf diesem Gerät gespeichert.</span>
           <div class="up-actions-right">
-            <button class="btn btn-primary" type="button" data-next>Vorab-Check starten</button>
+            <button class="btn btn-primary" type="button" data-next>Vorbereitung starten</button>
           </div>
         </div>
       </section>
@@ -688,9 +765,36 @@
             <input class="form-control" id="person_name" name="person_name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
           </label>
 
+          <label class="up-field form-label" for="age_range">
+            Alter – freiwillig
+            <select class="form-select" id="age_range" name="age_range">
+              <option value="">Keine Angabe</option>
+              <option>Unter 25 Jahre</option>
+              <option>25–34 Jahre</option>
+              <option>35–44 Jahre</option>
+              <option>45–54 Jahre</option>
+              <option>55–64 Jahre</option>
+              <option>65 Jahre oder älter</option>
+            </select>
+          </label>
+
           <label class="up-field form-label" for="role">
             Deine Rolle <span class="up-required" aria-hidden="true">*</span>
-            <input class="form-control" id="role" name="role" type="text" required placeholder="z. B. Gründer, Geschäftsführerin">
+            <select class="form-select" id="role" name="role" required data-reveal="#up-role-other-wrap" data-show-values="Andere Rolle">
+              <option value="">Bitte auswählen</option>
+              <option>Gründer/in</option>
+              <option>Mitgründer/in</option>
+              <option>Inhaber/in</option>
+              <option>Geschäftsführer/in</option>
+              <option>Nachfolger/in im Familienbetrieb</option>
+              <option>Selbstständig / Freiberuflich</option>
+              <option>Andere Rolle</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="role_other" id="up-role-other-wrap" hidden data-required-when-shown>
+            Andere Rolle
+            <input class="form-control" id="role_other" name="role_other" type="text" placeholder="Deine genaue Rolle">
           </label>
 
           <label class="up-field form-label" for="company">
@@ -705,7 +809,14 @@
 
           <label class="up-field form-label" for="founded">
             Gründungsjahr / Einstieg
-            <input class="form-control" id="founded" name="founded" type="text" inputmode="numeric" placeholder="z. B. 2019 oder Übernahme 2024">
+            <select class="form-select" id="founded" name="founded" data-reveal="#up-founded-detail-wrap" data-show-values="Übernahme / Einstieg|Sonstige Angabe">
+              <option value="">Bitte auswählen</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="founded_detail" id="up-founded-detail-wrap" hidden>
+            Jahr oder Art des Einstiegs
+            <input class="form-control" id="founded_detail" name="founded_detail" type="text" placeholder="z. B. Übernahme im Jahr 2021">
           </label>
 
           <label class="up-field form-label" for="team_size">
@@ -717,7 +828,34 @@
               <option>6–10 Personen</option>
               <option>11–25 Personen</option>
               <option>26–50 Personen</option>
-              <option>Mehr als 50 Personen</option>
+              <option>51–100 Personen</option>
+              <option>Mehr als 100 Personen</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="business_stage">
+            Wo steht dein Unternehmen heute?
+            <select class="form-select" id="business_stage" name="business_stage">
+              <option value="">Bitte auswählen</option>
+              <option>In Vorbereitung / Vorgründung</option>
+              <option>Gründungs- und Aufbauphase</option>
+              <option>Wachstumsphase</option>
+              <option>Etablierter Betrieb</option>
+              <option>Unternehmensnachfolge / Übernahme</option>
+              <option>Neuausrichtung / Umbruch</option>
+              <option>Andere Phase</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="customer_type">
+            Hauptsächliche Kundengruppe
+            <select class="form-select" id="customer_type" name="customer_type">
+              <option value="">Bitte auswählen</option>
+              <option>Privatkunden (B2C)</option>
+              <option>Geschäftskunden (B2B)</option>
+              <option>Öffentliche Auftraggeber (B2G)</option>
+              <option>Gemischte Kundengruppen</option>
+              <option>Andere Kundengruppe</option>
             </select>
           </label>
 
@@ -726,9 +864,27 @@
             <input class="form-control" id="website" name="website" type="text" inputmode="url" placeholder="Link oder @Nutzername">
           </label>
 
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Wie verdient dein Unternehmen Geld?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="business_model" type="checkbox" value="Dienstleistungen"> Dienstleistungen</label>
+              <label class="up-choice-chip"><input name="business_model" type="checkbox" value="Produkte / Waren"> Produkte / Waren</label>
+              <label class="up-choice-chip"><input name="business_model" type="checkbox" value="Abos / Mitgliedschaften"> Abos / Mitgliedschaften</label>
+              <label class="up-choice-chip"><input name="business_model" type="checkbox" value="Provisionen / Vermittlung"> Provisionen / Vermittlung</label>
+              <label class="up-choice-chip"><input name="business_model" type="checkbox" value="Lizenzen / Software"> Lizenzen / Software</label>
+              <label class="up-choice-chip"><input name="business_model" type="checkbox" value="Vermietung / Verpachtung"> Vermietung</label>
+              <label class="up-choice-chip"><input name="business_model" type="checkbox" value="Andere Einnahmequelle" data-reveal="#up-business-model-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="business_model_other" id="up-business-model-other-wrap" hidden>
+              Andere Einnahmequelle
+              <input class="form-control" id="business_model_other" name="business_model_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
           <label class="up-field form-label up-span-2" for="company_short">
-            Was macht dein Unternehmen? <span class="up-required" aria-hidden="true">*</span>
-            <textarea class="form-control" id="company_short" name="company_short" rows="4" required placeholder="Beschreibe dein Angebot in 2–4 Sätzen."></textarea>
+            Was genau bietet ihr an – und für wen? <span class="up-required" aria-hidden="true">*</span>
+            <textarea class="form-control" id="company_short" name="company_short" rows="3" required placeholder="Zwei bis vier Sätze reichen."></textarea>
           </label>
         </div>
 
@@ -743,49 +899,175 @@
       <section class="up-step" data-step="2" hidden>
         <div>
           <p class="up-kicker text-small">Schritt 2</p>
-          <h2>Dein unternehmerischer Weg</h2>
-          <p class="text-muted">Stichpunkte reichen vollkommen aus.</p>
+          <h2>Hintergrund und Gründung</h2>
+          <p class="text-muted">Die Auswahlfelder geben dir Orientierung. Ergänze nur dort, wo du mehr erzählen möchtest.</p>
         </div>
 
         <div class="up-grid">
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Was hat dich in Kindheit oder Jugend besonders geprägt?</legend>
+            <span class="up-choice-hint">Freiwillig · Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Unternehmerische Familie / Familienbetrieb"> Familienbetrieb</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Migration / Umzug / Neuanfang"> Neuanfang / Umzug</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Frühe Verantwortung"> Frühe Verantwortung</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Finanzielle Einschränkungen"> Finanzielle Einschränkungen</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Sport / Wettbewerb"> Sport / Wettbewerb</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Handwerk / Technik"> Handwerk / Technik</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Kreativität / Medien"> Kreativität / Medien</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Keine besondere Prägung"> Nichts Bestimmtes</label>
+              <label class="up-choice-chip"><input name="childhood_influences" type="checkbox" value="Andere Prägung" data-reveal="#up-childhood-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="childhood_other" id="up-childhood-other-wrap" hidden>
+              Andere prägende Erfahrung
+              <input class="form-control" id="childhood_other" name="childhood_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <label class="up-field form-label" for="education">
+            Welcher Bildungsweg passt am besten?
+            <select class="form-select" id="education" name="education" data-reveal="#up-education-other-wrap" data-show-values="Anderer Bildungsweg">
+              <option value="">Keine Angabe</option>
+              <option>Schule ohne weiteren Abschluss</option>
+              <option>Berufsausbildung</option>
+              <option>Meister/in, Techniker/in oder Fachwirt/in</option>
+              <option>Studium</option>
+              <option>Ausbildung und Studium</option>
+              <option>Quereinstieg / autodidaktisch</option>
+              <option>Anderer Bildungsweg</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="education_other" id="up-education-other-wrap" hidden>
+            Anderer Bildungsweg
+            <input class="form-control" id="education_other" name="education_other" type="text" placeholder="Kurz ergänzen">
+          </label>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Was hast du vor der Gründung oder Übernahme gemacht?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Ausbildung"> Ausbildung</label>
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Studium"> Studium</label>
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Angestellt in derselben Branche"> Angestellt in derselben Branche</label>
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Angestellt in einer anderen Branche"> Andere Branche</label>
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Familienbetrieb"> Familienbetrieb</label>
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Schon vorher selbstständig"> Schon selbstständig</label>
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Direkt gegründet"> Direkt gegründet</label>
+              <label class="up-choice-chip"><input name="career_path" type="checkbox" value="Anderer Weg" data-reveal="#up-career-other-wrap"> Anderer Weg</label>
+            </div>
+            <label class="up-field up-other-field" for="career_path_other" id="up-career-other-wrap" hidden>
+              Anderer Weg
+              <input class="form-control" id="career_path_other" name="career_path_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Was war der Auslöser für die Gründung oder Übernahme?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Marktlücke erkannt"> Marktlücke</label>
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Eigenes Problem lösen"> Eigenes Problem</label>
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Leidenschaft zum Beruf machen"> Leidenschaft</label>
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Unabhängiger arbeiten"> Unabhängigkeit</label>
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Familiennachfolge / Übernahme"> Nachfolge / Übernahme</label>
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Konkrete Kundenanfrage / Gelegenheit"> Gelegenheit / Anfrage</label>
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Beruflicher Umbruch"> Beruflicher Umbruch</label>
+              <label class="up-choice-chip"><input name="founding_trigger" type="checkbox" value="Anderer Auslöser" data-reveal="#up-trigger-other-wrap"> Anderer Auslöser</label>
+            </div>
+            <label class="up-field up-other-field" for="founding_trigger_other" id="up-trigger-other-wrap" hidden>
+              Anderer Auslöser
+              <input class="form-control" id="founding_trigger_other" name="founding_trigger_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
           <label class="up-field form-label up-span-2" for="motivation">
-            Wie hat dein Weg begonnen? <span class="up-required" aria-hidden="true">*</span>
-            <textarea class="form-control" id="motivation" name="motivation" rows="4" required placeholder="Ausgangssituation, Idee, Motivation oder Übernahme …"></textarea>
+            Wie wurde aus der Idee ein echtes Unternehmen? <span class="up-required" aria-hidden="true">*</span>
+            <textarea class="form-control" id="motivation" name="motivation" rows="4" required placeholder="Erste Schritte, wichtige Entscheidungen, Partner oder ein Schlüsselmoment – Stichpunkte reichen."></textarea>
+          </label>
+
+          <label class="up-field form-label" for="start_capital">
+            Wie viel Startkapital war ungefähr nötig?
+            <select class="form-select" id="start_capital" name="start_capital" data-reveal="#up-capital-detail-wrap" data-show-values="Andere Spanne">
+              <option value="">Keine Angabe</option>
+              <option>Kein Startkapital nötig</option>
+              <option>Unter 10.000 €</option>
+              <option>10.000–50.000 €</option>
+              <option>50.000–100.000 €</option>
+              <option>100.000–250.000 €</option>
+              <option>Mehr als 250.000 €</option>
+              <option>Andere Spanne</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="capital_detail" id="up-capital-detail-wrap" hidden>
+            Andere Kapitalspanne
+            <input class="form-control" id="capital_detail" name="capital_detail" type="text" placeholder="Betrag oder grobe Spanne">
+          </label>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Wie wurde der Start finanziert?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Eigenkapital / Ersparnisse"> Eigenkapital</label>
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Bankkredit"> Bankkredit</label>
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Förderung / Zuschuss"> Förderung</label>
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Investoren"> Investoren</label>
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Familie / Freunde"> Familie / Freunde</label>
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Aus ersten Umsätzen finanziert"> Erste Umsätze</label>
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Keine externe Finanzierung"> Keine externe Finanzierung</label>
+              <label class="up-choice-chip"><input name="capital_sources" type="checkbox" value="Andere Finanzierung" data-reveal="#up-capital-source-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="capital_source_other" id="up-capital-source-other-wrap" hidden>
+              Andere Finanzierung
+              <input class="form-control" id="capital_source_other" name="capital_source_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Was war am Anfang besonders schwierig?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Finanzierung / Liquidität"> Finanzierung</label>
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Erste Kunden gewinnen"> Erste Kunden</label>
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Team aufbauen"> Teamaufbau</label>
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Bürokratie / Genehmigungen"> Bürokratie</label>
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Positionierung / Preise"> Positionierung / Preise</label>
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Technik / Prozesse"> Technik / Prozesse</label>
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Zeitdruck / Überlastung"> Zeitdruck</label>
+              <label class="up-choice-chip"><input name="early_challenges" type="checkbox" value="Andere Anfangshürde" data-reveal="#up-early-challenge-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="early_challenge_other" id="up-early-challenge-other-wrap" hidden>
+              Andere Anfangshürde
+              <input class="form-control" id="early_challenge_other" name="early_challenge_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <label class="up-field form-label" for="almost_gave_up">
+            Gab es einen Moment, in dem du fast aufgegeben hättest?
+            <select class="form-select" id="almost_gave_up" name="almost_gave_up">
+              <option value="">Keine Angabe</option>
+              <option>Ja</option>
+              <option>Mehrmals</option>
+              <option>Nein</option>
+              <option>Darüber möchte ich lieber im Gespräch sprechen</option>
+            </select>
           </label>
 
           <label class="up-field form-label" for="milestone">
-            Welcher Moment war besonders wichtig?
-            <textarea class="form-control" id="milestone" name="milestone" rows="5" placeholder="Erster großer Auftrag, Durchbruch, wichtige Entscheidung …"></textarea>
+            Welcher Wendepunkt war besonders wichtig?
+            <textarea class="form-control" id="milestone" name="milestone" rows="3" placeholder="Erster großer Auftrag, Durchbruch oder wichtige Entscheidung …"></textarea>
           </label>
 
-          <label class="up-field form-label" for="difference">
-            Was unterscheidet euch vom Wettbewerb?
-            <textarea class="form-control" id="difference" name="difference" rows="5" placeholder="Arbeitsweise, Haltung, Service, Spezialisierung …"></textarea>
-          </label>
-
-          <label class="up-field form-label" for="challenge">
-            Was war bisher die größte Herausforderung?
-            <textarea class="form-control" id="challenge" name="challenge" rows="5" placeholder="Eine schwierige Phase und wie du damit umgegangen bist."></textarea>
-          </label>
-
-          <label class="up-field form-label" for="lesson">
-            Welche Lektion hat dich am meisten geprägt?
-            <textarea class="form-control" id="lesson" name="lesson" rows="5" placeholder="Etwas, das du heute anders machen würdest."></textarea>
-          </label>
-
-          <label class="up-field form-label up-span-2" for="values">
-            Welche Werte bestimmen deine Entscheidungen?
-            <input class="form-control" id="values" name="values" type="text" placeholder="z. B. Verlässlichkeit, Mut, Disziplin, Fairness">
+          <label class="up-field form-label up-span-2" for="challenge">
+            Möchtest du eine schwierige Phase kurz einordnen?
+            <textarea class="form-control" id="challenge" name="challenge" rows="3" placeholder="Was ist passiert – und was hat dir geholfen? Freiwillig."></textarea>
           </label>
         </div>
 
         <div class="up-preview">
-          <strong>Beispielfragen im Interview</strong>
-          <ul class="up-question-list">
-            <li>Gab es einen Punkt, an dem du ans Aufgeben gedacht hast?</li>
-            <li>Welche Entscheidung würdest du heute anders treffen?</li>
-            <li>Was sehen Außenstehende an deinem Alltag meistens nicht?</li>
-          </ul>
+          <strong>Im Interview gehen wir bei den interessantesten Punkten tiefer.</strong>
+          <span class="text-small">Du musst hier keine fertigen Geschichten formulieren. Gute Stichpunkte reichen für die Vorbereitung.</span>
         </div>
 
         <div class="up-actions">
@@ -798,14 +1080,61 @@
 
       <section class="up-step" data-step="3" hidden>
         <div>
-          <p class="up-kicker text-small">Schritt 3 · Persönlich angepasst</p>
-          <h2>Fragen speziell für <span id="up-industry-title">deine Branche</span></h2>
-          <p class="text-muted">Diese Fragen werden automatisch passend zu deiner ausgewählten Branche zusammengestellt. Drei Kernfragen sind erforderlich; zwei Vertiefungen sind freiwillig.</p>
+          <p class="up-kicker text-small">Schritt 3 · Branchenschwerpunkt</p>
+          <h2><span id="up-industry-title">Deine Branche</span> im Alltag</h2>
+          <p class="text-muted">Wir haben für deine Branche passende Vertiefungen vorbereitet. Zwei kurze Antworten reichen, alles Weitere ist freiwillig.</p>
         </div>
 
         <div class="up-preview">
-          <strong id="up-industry-profile-label">Branchenspezifische Vorbereitung</strong>
-          <span class="text-small">Stichpunkte reichen. Im Interview können wir die Antworten gemeinsam vertiefen.</span>
+          <strong id="up-industry-profile-label">Ausgewählte Branchenfragen</strong>
+          <span class="text-small">Antworte gern knapp. Details klären wir gemeinsam im Gespräch.</span>
+        </div>
+
+        <div class="up-grid">
+          <label class="up-field form-label" for="operational_challenge">
+            Was fordert euch aktuell im Tagesgeschäft am meisten?
+            <select class="form-select" id="operational_challenge" name="operational_challenge" data-reveal="#up-operational-other-wrap" data-show-values="Andere Herausforderung">
+              <option value="">Bitte auswählen</option>
+              <option>Personal finden und halten</option>
+              <option>Steigende Kosten / Preisdruck</option>
+              <option>Neue Kunden gewinnen</option>
+              <option>Auslastung / Auftragslage</option>
+              <option>Prozesse und Zeitmanagement</option>
+              <option>Finanzierung / Liquidität</option>
+              <option>Lieferanten / Verfügbarkeit</option>
+              <option>Bürokratie / Regulierung</option>
+              <option>Digitalisierung / Technik</option>
+              <option>Aktuell keine große Herausforderung</option>
+              <option>Andere Herausforderung</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="operational_challenge_other" id="up-operational-other-wrap" hidden>
+            Andere Herausforderung
+            <input class="form-control" id="operational_challenge_other" name="operational_challenge_other" type="text" placeholder="Kurz ergänzen">
+          </label>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Über welche Kanäle gewinnt ihr heute Kunden?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Empfehlungen / Mundpropaganda"> Empfehlungen</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Stammkunden"> Stammkunden</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Social Media"> Social Media</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Google / Suchmaschinen"> Google / Suche</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Website / Onlineshop"> Website / Shop</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Plattformen / Marktplätze"> Plattformen</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Netzwerke / Kooperationen"> Netzwerke</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Direktvertrieb / Kaltakquise"> Direktvertrieb</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Laufkundschaft / Standort"> Laufkundschaft</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Messen / Veranstaltungen"> Messen / Events</label>
+              <label class="up-choice-chip"><input name="acquisition_channels" type="checkbox" value="Anderer Kanal" data-reveal="#up-acquisition-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="acquisition_channel_other" id="up-acquisition-other-wrap" hidden>
+              Anderer Kanal
+              <input class="form-control" id="acquisition_channel_other" name="acquisition_channel_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
         </div>
 
         <div class="up-grid" id="up-industry-questions">
@@ -818,8 +1147,8 @@
             <textarea class="form-control" id="industry_answer_2" name="industry_answer_2" rows="4" required placeholder="Deine Antwort in Stichpunkten …"></textarea>
           </label>
           <label class="up-field form-label up-span-2" for="industry_answer_3">
-            <span id="industry_question_3">Branchenspezifische Frage 3</span> <span class="up-required" aria-hidden="true">*</span>
-            <textarea class="form-control" id="industry_answer_3" name="industry_answer_3" rows="4" required placeholder="Deine Antwort in Stichpunkten …"></textarea>
+            <span id="industry_question_3">Branchenspezifische Frage 3</span>
+            <textarea class="form-control" id="industry_answer_3" name="industry_answer_3" rows="3" placeholder="Freiwillige Vertiefung …"></textarea>
           </label>
           <label class="up-field form-label" for="industry_answer_4">
             <span id="industry_question_4">Branchenspezifische Frage 4</span>
@@ -834,7 +1163,7 @@
         <div class="up-actions">
           <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
           <div class="up-actions-right">
-            <button class="btn btn-primary" type="button" data-next>Weiter: Interviewthemen</button>
+            <button class="btn btn-primary" type="button" data-next>Weiter: Dein Geschäft heute</button>
           </div>
         </div>
       </section>
@@ -842,8 +1171,217 @@
       <section class="up-step" data-step="4" hidden>
         <div>
           <p class="up-kicker text-small">Schritt 4</p>
-          <h2>Worüber möchtest du sprechen?</h2>
-          <p class="text-muted">Wähle die Themen aus, die im Gespräch vorkommen dürfen. Mehrfachauswahl möglich.</p>
+          <h2>Dein Geschäft heute</h2>
+          <p class="text-muted">Ein schneller Blick auf Alltag, Zahlen und die Entwicklung, die gerade besonders gut läuft.</p>
+        </div>
+
+        <div class="up-grid">
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Womit verbringst du heute den größten Teil deiner Zeit?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Operatives Tagesgeschäft"> Operatives Geschäft</label>
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Kunden / Beratung / Verkauf"> Kunden / Verkauf</label>
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Team und Führung"> Team / Führung</label>
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Marketing / Content"> Marketing / Content</label>
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Finanzen / Verwaltung"> Finanzen / Verwaltung</label>
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Strategie / Wachstum"> Strategie / Wachstum</label>
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Produkt / Leistung weiterentwickeln"> Produkt / Leistung</label>
+              <label class="up-choice-chip"><input name="daily_focus" type="checkbox" value="Andere Hauptaufgabe" data-reveal="#up-daily-focus-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="daily_focus_other" id="up-daily-focus-other-wrap" hidden>
+              Andere Hauptaufgabe
+              <input class="form-control" id="daily_focus_other" name="daily_focus_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <label class="up-field form-label" for="work_rhythm">
+            Wie fühlt sich dein Arbeitsalltag meistens an?
+            <select class="form-select" id="work_rhythm" name="work_rhythm">
+              <option value="">Bitte auswählen</option>
+              <option>Gut planbar und strukturiert</option>
+              <option>Abwechslungsreich, aber kontrollierbar</option>
+              <option>Stark saisonabhängig</option>
+              <option>Viele Spitzen am Abend / Wochenende</option>
+              <option>Oft kurzfristig und unvorhersehbar</option>
+              <option>Aktuell sehr arbeitsintensiv</option>
+              <option>Andere Beschreibung</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="finance_openness">
+            Wie offen möchtest du über Zahlen sprechen?
+            <select class="form-select" id="finance_openness" name="finance_openness">
+              <option value="">Bitte auswählen</option>
+              <option>Konkrete Zahlen sind in Ordnung</option>
+              <option>Nur ungefähre Spannen</option>
+              <option>Nur allgemeine Einordnung</option>
+              <option>Bitte keine Finanzfragen</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="revenue_range">
+            Jahresumsatz – freiwillig
+            <select class="form-select" id="revenue_range" name="revenue_range">
+              <option value="">Keine Angabe</option>
+              <option>Unter 100.000 € pro Jahr</option>
+              <option>100.000–250.000 € pro Jahr</option>
+              <option>250.000–500.000 € pro Jahr</option>
+              <option>500.000–1 Mio. € pro Jahr</option>
+              <option>1–5 Mio. € pro Jahr</option>
+              <option>Mehr als 5 Mio. € pro Jahr</option>
+              <option>Andere Bezugsgröße / saisonabhängig</option>
+            </select>
+          </label>
+
+          <label class="up-field form-label" for="finance_note">
+            Hinweis zu den Zahlen
+            <input class="form-control" id="finance_note" name="finance_note" type="text" placeholder="z. B. saisonabhängig oder mehrere Standorte">
+          </label>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Was entwickelt sich aktuell besonders gut?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Mehr Kunden / Aufträge"> Kunden / Aufträge</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Umsatz / Profitabilität"> Umsatz / Profitabilität</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Teamaufbau"> Teamaufbau</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Prozesse / Organisation"> Prozesse</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Neue Produkte / Leistungen"> Neues Angebot</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Standort / Kapazität"> Standort / Kapazität</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Digitalisierung"> Digitalisierung</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Kooperationen / Netzwerk"> Kooperationen</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Stabilität / Qualität"> Stabilität / Qualität</label>
+              <label class="up-choice-chip"><input name="current_progress" type="checkbox" value="Andere positive Entwicklung" data-reveal="#up-progress-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="current_progress_other" id="up-progress-other-wrap" hidden>
+              Andere positive Entwicklung
+              <input class="form-control" id="current_progress_other" name="current_progress_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <label class="up-field form-label" for="difference">
+            Was macht euer Unternehmen besonders?
+            <textarea class="form-control" id="difference" name="difference" rows="3" placeholder="Konzept, Qualität, Arbeitsweise, Service oder Spezialisierung …"></textarea>
+          </label>
+
+          <label class="up-field form-label" for="biggest_success">
+            Was war bisher dein größter unternehmerischer Erfolg?
+            <textarea class="form-control" id="biggest_success" name="biggest_success" rows="3" placeholder="Meilenstein, Projekt, Zahl oder ein persönlicher Moment …"></textarea>
+          </label>
+        </div>
+
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Weiter: Lektionen & Ziele</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="5" hidden>
+        <div>
+          <p class="up-kicker text-small">Schritt 5</p>
+          <h2>Lektionen und nächste Ziele</h2>
+          <p class="text-muted">Hier entstehen meistens die persönlichsten und wertvollsten Teile des Interviews.</p>
+        </div>
+
+        <div class="up-grid">
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Welche Lektionen waren für dich besonders wichtig?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Früh mit Kunden sprechen"> Kunden früh einbeziehen</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Liquidität vor Umsatz"> Liquidität zählt</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Fokus statt zu vieler Ideen"> Fokus halten</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Das richtige Team entscheidet"> Richtiges Team</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Verkauf ist unverzichtbar"> Verkaufen lernen</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Delegieren und loslassen"> Delegieren</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Zahlen und Kennzahlen verstehen"> Zahlen verstehen</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Geduld und Ausdauer"> Geduld / Ausdauer</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Gesundheit und Ausgleich"> Gesundheit / Ausgleich</label>
+              <label class="up-choice-chip"><input name="lesson_topics" type="checkbox" value="Andere Lektion" data-reveal="#up-lesson-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="lesson_other" id="up-lesson-other-wrap" hidden>
+              Andere Lektion
+              <input class="form-control" id="lesson_other" name="lesson_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <label class="up-field form-label up-span-2" for="lesson">
+            Welche Erkenntnis würdest du gern kurz erklären?
+            <textarea class="form-control" id="lesson" name="lesson" rows="3" placeholder="Ein bis drei Sätze oder Stichpunkte …"></textarea>
+          </label>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Welche Fehler würdest du heute eher vermeiden?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Zu schnell gewachsen"> Zu schnell gewachsen</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Zu lange gezögert"> Zu lange gezögert</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Preise zu niedrig angesetzt"> Preise zu niedrig</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Falsche Partner / Mitarbeitende gewählt"> Falsche Partner / Team</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Verträge / Bürokratie unterschätzt"> Verträge / Bürokratie</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Marketing / Verkauf unterschätzt"> Verkauf unterschätzt</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Zu wenig auf Zahlen geachtet"> Zahlen zu spät beachtet</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Zu viel selbst gemacht"> Zu viel selbst gemacht</label>
+              <label class="up-choice-chip"><input name="mistakes" type="checkbox" value="Anderer Fehler" data-reveal="#up-mistake-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="mistakes_other" id="up-mistake-other-wrap" hidden>
+              Anderer Fehler
+              <input class="form-control" id="mistakes_other" name="mistakes_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Was motiviert dich heute weiterzumachen?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Kunden und ihre Ergebnisse"> Kunden</label>
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Team und Verantwortung"> Team / Verantwortung</label>
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Freiheit und Selbstbestimmung"> Freiheit</label>
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Wachstum und Ehrgeiz"> Wachstum / Ehrgeiz</label>
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Etwas Sinnvolles schaffen"> Sinn / Wirkung</label>
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Familie / Zukunft aufbauen"> Familie / Zukunft</label>
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Freude am Produkt / Handwerk"> Freude an der Arbeit</label>
+              <label class="up-choice-chip"><input name="motivation_drivers" type="checkbox" value="Andere Motivation" data-reveal="#up-motivation-driver-other-wrap"> Andere</label>
+            </div>
+            <label class="up-field up-other-field" for="motivation_driver_other" id="up-motivation-driver-other-wrap" hidden>
+              Andere Motivation
+              <input class="form-control" id="motivation_driver_other" name="motivation_driver_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <fieldset class="up-choice-section up-span-2">
+            <legend>Welche Ziele stehen in den nächsten 12 Monaten an?</legend>
+            <span class="up-choice-hint">Mehrfachauswahl möglich</span>
+            <div class="up-choice-grid">
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Mehr Umsatz / Profitabilität"> Umsatz / Profitabilität</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Neue Kunden / Märkte"> Neue Kunden / Märkte</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Team vergrößern"> Team vergrößern</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Prozesse verbessern"> Prozesse verbessern</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Neues Produkt / neue Leistung"> Neues Angebot</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Neuer Standort / größere Fläche"> Neuer Standort</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Digitalisierung / Automatisierung"> Digitalisierung</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Mehr persönliche Zeit / Entlastung"> Mehr Entlastung</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Unternehmen stabilisieren"> Stabilisieren</label>
+              <label class="up-choice-chip"><input name="goals_12m" type="checkbox" value="Anderes Ziel" data-reveal="#up-goals-other-wrap"> Anderes Ziel</label>
+            </div>
+            <label class="up-field up-other-field" for="goals_12m_other" id="up-goals-other-wrap" hidden>
+              Anderes Ziel
+              <input class="form-control" id="goals_12m_other" name="goals_12m_other" type="text" placeholder="Kurz ergänzen">
+            </label>
+          </fieldset>
+
+          <label class="up-field form-label up-span-2" for="founder_advice">
+            Was würdest du jungen Gründerinnen und Gründern raten?
+            <textarea class="form-control" id="founder_advice" name="founder_advice" rows="3" placeholder="Ein praktischer Rat oder ein Satz, den du selbst früher gebraucht hättest …"></textarea>
+          </label>
+        </div>
+
+        <div>
+          <h3>Welche Themen dürfen im Interview mehr Raum bekommen?</h3>
+          <p class="text-small text-muted">Mehrfachauswahl möglich</p>
         </div>
 
         <div class="up-check-grid" id="up-topic-grid">
@@ -861,7 +1399,7 @@
           </label>
           <label class="up-check-card" for="topic_finance">
             <input class="form-check-input" id="topic_finance" name="topics" type="checkbox" value="Finanzen und Kennzahlen">
-            <span class="up-check-copy"><strong>Finanzen & Kennzahlen</strong><span class="text-small text-muted">Nur in dem Rahmen, den du festlegst</span></span>
+            <span class="up-check-copy"><strong>Finanzen & Kennzahlen</strong><span class="text-small text-muted">Nur in deinem gewählten Rahmen</span></span>
           </label>
           <label class="up-check-card" for="topic_team">
             <input class="form-check-input" id="topic_team" name="topics" type="checkbox" value="Team und Führung">
@@ -873,7 +1411,7 @@
           </label>
           <label class="up-check-card" for="topic_personal">
             <input class="form-check-input" id="topic_personal" name="topics" type="checkbox" value="Persönlichkeit und Mindset">
-            <span class="up-check-copy"><strong>Persönlichkeit & Mindset</strong><span class="text-small text-muted">Werte, Druck und Motivation</span></span>
+            <span class="up-check-copy"><strong>Persönlichkeit & Haltung</strong><span class="text-small text-muted">Werte, Druck und Motivation</span></span>
           </label>
           <label class="up-check-card" for="topic_future">
             <input class="form-check-input" id="topic_future" name="topics" type="checkbox" value="Ziele und Zukunft">
@@ -881,46 +1419,8 @@
           </label>
         </div>
 
-        <div class="up-note" id="up-finance-fields" hidden>
-          <div class="up-grid">
-            <label class="up-field form-label" for="finance_openness">
-              Wie offen möchtest du über Zahlen sprechen?
-              <select class="form-select" id="finance_openness" name="finance_openness">
-                <option value="">Bitte auswählen</option>
-                <option>Konkrete Zahlen sind in Ordnung</option>
-                <option>Nur ungefähre Spannen</option>
-                <option>Nur allgemeine Einordnung</option>
-                <option>Bitte keine Finanzfragen</option>
-              </select>
-            </label>
-
-            <label class="up-field form-label" for="revenue_range">
-              Umsatzgröße – freiwillig
-              <select class="form-select" id="revenue_range" name="revenue_range">
-                <option value="">Keine Angabe</option>
-                <option>Bis 10.000 € pro Monat</option>
-                <option>10.000–25.000 € pro Monat</option>
-                <option>25.000–50.000 € pro Monat</option>
-                <option>50.000–100.000 € pro Monat</option>
-                <option>Mehr als 100.000 € pro Monat</option>
-                <option>Andere Bezugsgröße / saisonabhängig</option>
-              </select>
-            </label>
-
-            <label class="up-field form-label" for="start_capital">
-              Startkapital – freiwillig
-              <input class="form-control" id="start_capital" name="start_capital" type="text" placeholder="Betrag, Spanne oder „ohne Startkapital“">
-            </label>
-
-            <label class="up-field form-label" for="finance_note">
-              Was darf bei Zahlen nicht missverstanden werden?
-              <input class="form-control" id="finance_note" name="finance_note" type="text" placeholder="z. B. Umsatz ist saisonabhängig">
-            </label>
-          </div>
-        </div>
-
         <label class="up-field form-label" for="focus_topic">
-          Welches Thema soll im Interview auf jeden Fall vorkommen?
+          Welches Thema soll auf jeden Fall vorkommen?
           <textarea class="form-control" id="focus_topic" name="focus_topic" rows="3" placeholder="Dein Wunsch-Schwerpunkt …"></textarea>
         </label>
 
@@ -932,9 +1432,9 @@
         </div>
       </section>
 
-      <section class="up-step" data-step="5" hidden>
+      <section class="up-step" data-step="6" hidden>
         <div>
-          <p class="up-kicker text-small">Schritt 5</p>
+          <p class="up-kicker text-small">Schritt 6</p>
           <h2>Damit du dich wohlfühlst</h2>
           <p class="text-muted">Lege fest, was wir vor dem Gespräch berücksichtigen sollen.</p>
         </div>
@@ -944,9 +1444,10 @@
             Bevorzugte Gesprächsform
             <select class="form-select" id="recording" name="recording">
               <option value="">Noch offen</option>
-              <option>Video und Ton sind in Ordnung</option>
-              <option>Lieber nur Ton / Podcast</option>
-              <option>Erst in einem Vorgespräch klären</option>
+              <option>Persönlich vor Ort</option>
+              <option>Digital per Video</option>
+              <option>Nur Ton / Podcast</option>
+              <option>Erst im Vorgespräch entscheiden</option>
             </select>
           </label>
 
@@ -958,6 +1459,7 @@
               <option>E-Mail</option>
               <option>Telefon / WhatsApp</option>
               <option>LinkedIn</option>
+              <option>Andere Kontaktmöglichkeit</option>
             </select>
           </label>
 
@@ -1000,7 +1502,7 @@
         </div>
       </section>
 
-      <section class="up-step" data-step="6" hidden>
+      <section class="up-step" data-step="7" hidden>
         <div>
           <p class="up-kicker text-small">Fertig</p>
           <h2>Deine Vorbereitung ist komplett.</h2>
@@ -1051,14 +1553,13 @@
       var industrySelect = root.querySelector("#industry");
       var industryOther = root.querySelector("#industry_other");
       var industryOtherWrap = root.querySelector("#up-industry-other-wrap");
-      var financeToggle = root.querySelector("#topic_finance");
-      var financeFields = root.querySelector("#up-finance-fields");
+      var foundedSelect = root.querySelector("#founded");
       var review = root.querySelector("#up-review");
       var tailoredQuestions = root.querySelector("#up-tailored-questions");
       var status = root.querySelector("#up-status");
       var currentStep = 0;
-      var storageKey = "unternehmerpfad-vorabcheck-v2";
-      var stepNames = ["Überblick", "Unternehmen", "Dein Weg", "Branchenfragen", "Interviewthemen", "Rahmen", "Zusammenfassung"];
+      var storageKey = "unternehmerpfad-vorabcheck-v3";
+      var stepNames = ["Überblick", "Person & Unternehmen", "Hintergrund & Gründung", "Branchenalltag", "Geschäft heute", "Lektionen & Ziele", "Rahmen & Kontakt", "Zusammenfassung"];
 
       var industryProfileLabels = {
         general: "Allgemeines Geschäftsmodell",
@@ -1098,11 +1599,11 @@
           "Welche Veränderung in deiner Branche wird dein Geschäft am stärksten beeinflussen?"
         ],
         gastro: [
-          "Welches gastronomische Konzept verfolgst du und welche Gäste möchtest du erreichen?",
-          "Wie kalkulierst du Wareneinsatz, Portionsgrößen und Verkaufspreise?",
-          "Wie organisierst du Personal und Abläufe zu Stoßzeiten?",
-          "Wie stellst du gleichbleibende Qualität, Hygiene und Service sicher?",
-          "Welche Rolle spielen Saison, Lieferdienste und wiederkehrende Gäste für deinen Umsatz?"
+          "Was macht euer gastronomisches Konzept besonders – Küche, Atmosphäre, Zielgruppe oder Alleinstellungsmerkmal?",
+          "Wie entsteht bei euch die Speise- oder Getränkekarte – von Inspiration und Saison bis zur Kalkulation?",
+          "Wie wichtig sind Qualität, Frische und die Auswahl eurer Lieferanten für euren Erfolg?",
+          "Wie organisiert ihr Stoßzeiten, Wochenenden oder Personalmangel zwischen Küche und Service?",
+          "Welche Rolle spielen Bewertungen, Stammgäste und Weiterempfehlungen für euch?"
         ],
         food_production: [
           "Wie wählst du Rohstoffe und Lieferanten aus und sicherst ihre Qualität?",
@@ -1276,30 +1777,69 @@
 
       var labels = {
         person_name: "Name",
+        age_range: "Alter",
         role: "Rolle",
+        role_other: "Andere Rolle",
         company: "Unternehmen",
         industry: "Branche",
         location: "Standort",
         founded: "Gründungsjahr / Einstieg",
+        founded_detail: "Details zum Einstieg",
         team_size: "Teamgröße",
+        business_stage: "Unternehmensphase",
+        customer_type: "Kundengruppe",
+        business_model: "Einnahmequellen",
+        business_model_other: "Andere Einnahmequelle",
         website: "Website / Social Media",
-        company_short: "Kurzbeschreibung",
-        motivation: "Beginn des Weges",
-        milestone: "Wichtiger Moment",
-        difference: "Unterschied zum Wettbewerb",
-        challenge: "Größte Herausforderung",
-        lesson: "Wichtigste Lektion",
-        values: "Werte",
+        company_short: "Angebot und Zielgruppe",
+        childhood_influences: "Prägung in Kindheit / Jugend",
+        childhood_other: "Andere prägende Erfahrung",
+        education: "Bildungsweg",
+        education_other: "Anderer Bildungsweg",
+        career_path: "Weg vor der Gründung / Übernahme",
+        career_path_other: "Anderer beruflicher Weg",
+        founding_trigger: "Auslöser für Gründung / Übernahme",
+        founding_trigger_other: "Anderer Auslöser",
+        motivation: "Von der Idee zur Umsetzung",
+        start_capital: "Benötigtes Startkapital",
+        capital_detail: "Andere Kapitalspanne",
+        capital_sources: "Finanzierungswege",
+        capital_source_other: "Andere Finanzierung",
+        early_challenges: "Herausforderungen zu Beginn",
+        early_challenge_other: "Andere Anfangshürde",
+        almost_gave_up: "Fast aufgegeben?",
+        milestone: "Wichtiger Wendepunkt",
+        challenge: "Schwierige Phase",
+        operational_challenge: "Größte operative Herausforderung heute",
+        operational_challenge_other: "Andere operative Herausforderung",
+        acquisition_channels: "Kanäle zur Kundengewinnung",
+        acquisition_channel_other: "Anderer Akquise-Kanal",
         industry_answer_1: "Branchenfrage 1",
         industry_answer_2: "Branchenfrage 2",
         industry_answer_3: "Branchenfrage 3",
         industry_answer_4: "Branchenfrage 4",
         industry_answer_5: "Branchenfrage 5",
-        topics: "Gewünschte Interviewthemen",
+        daily_focus: "Schwerpunkte im Arbeitsalltag",
+        daily_focus_other: "Andere Hauptaufgabe",
+        work_rhythm: "Arbeitsrhythmus",
         finance_openness: "Offenheit bei Zahlen",
-        revenue_range: "Umsatzgröße",
-        start_capital: "Startkapital",
+        revenue_range: "Jahresumsatz",
         finance_note: "Hinweis zu Zahlen",
+        current_progress: "Aktuell positive Entwicklungen",
+        current_progress_other: "Andere positive Entwicklung",
+        difference: "Was das Unternehmen besonders macht",
+        biggest_success: "Größter unternehmerischer Erfolg",
+        lesson_topics: "Wichtige Lektionen",
+        lesson_other: "Andere Lektion",
+        lesson: "Persönliche Erkenntnis",
+        mistakes: "Fehler, die heute vermieden würden",
+        mistakes_other: "Anderer Fehler",
+        motivation_drivers: "Heutige Motivation",
+        motivation_driver_other: "Andere Motivation",
+        goals_12m: "Ziele für die nächsten 12 Monate",
+        goals_12m_other: "Anderes 12-Monats-Ziel",
+        founder_advice: "Rat an junge Gründer/innen",
+        topics: "Gewünschte Interviewthemen",
         focus_topic: "Wunsch-Schwerpunkt",
         recording: "Gesprächsform",
         preferred_contact: "Kontaktweg",
@@ -1311,11 +1851,12 @@
       };
 
       var groups = [
-        { title: "Person & Unternehmen", fields: ["person_name", "role", "company", "industry", "location", "founded", "team_size", "website", "company_short"], step: 1 },
-        { title: "Unternehmerischer Weg", fields: ["motivation", "milestone", "difference", "challenge", "lesson", "values"], step: 2 },
-        { title: "Fragen zur Branche", fields: ["industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"], step: 3 },
-        { title: "Interviewthemen", fields: ["topics", "finance_openness", "revenue_range", "start_capital", "finance_note", "focus_topic"], step: 4 },
-        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 5 }
+        { title: "Person & Unternehmen", fields: ["person_name", "age_range", "role", "role_other", "company", "industry", "location", "founded", "founded_detail", "team_size", "business_stage", "customer_type", "business_model", "business_model_other", "website", "company_short"], step: 1 },
+        { title: "Hintergrund & Gründung", fields: ["childhood_influences", "childhood_other", "education", "education_other", "career_path", "career_path_other", "founding_trigger", "founding_trigger_other", "motivation", "start_capital", "capital_detail", "capital_sources", "capital_source_other", "early_challenges", "early_challenge_other", "almost_gave_up", "milestone", "challenge"], step: 2 },
+        { title: "Branchenalltag", fields: ["operational_challenge", "operational_challenge_other", "acquisition_channels", "acquisition_channel_other", "industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"], step: 3 },
+        { title: "Geschäft heute", fields: ["daily_focus", "daily_focus_other", "work_rhythm", "finance_openness", "revenue_range", "finance_note", "current_progress", "current_progress_other", "difference", "biggest_success"], step: 4 },
+        { title: "Lektionen & Ziele", fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice", "topics", "focus_topic"], step: 5 },
+        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 6 }
       ];
 
       function getSelectedIndustryName() {
@@ -1349,6 +1890,52 @@
         if (!needsOther) industryOther.setCustomValidity("");
       }
 
+      function populateFoundedYears() {
+        if (!foundedSelect || foundedSelect.options.length > 1) return;
+        var currentYear = new Date().getFullYear();
+        var yearGroup = document.createElement("optgroup");
+        yearGroup.label = "Gründungsjahr";
+        for (var year = currentYear; year >= 1950; year -= 1) {
+          var yearOption = document.createElement("option");
+          yearOption.value = String(year);
+          yearOption.textContent = String(year);
+          yearGroup.appendChild(yearOption);
+        }
+        foundedSelect.appendChild(yearGroup);
+
+        var otherGroup = document.createElement("optgroup");
+        otherGroup.label = "Andere Situation";
+        ["Vor 1950", "Noch nicht gegründet", "Übernahme / Einstieg", "Sonstige Angabe"].forEach(function (value) {
+          var option = document.createElement("option");
+          option.value = value;
+          option.textContent = value;
+          otherGroup.appendChild(option);
+        });
+        foundedSelect.appendChild(otherGroup);
+      }
+
+      function updateConditionalFields(changedControl) {
+        Array.prototype.slice.call(root.querySelectorAll("[data-reveal]")).forEach(function (control) {
+          var target = root.querySelector(control.getAttribute("data-reveal"));
+          if (!target) return;
+          var show;
+          if (control.type === "checkbox" || control.type === "radio") {
+            show = control.checked;
+          } else {
+            var values = (control.getAttribute("data-show-values") || "").split("|");
+            show = values.indexOf(control.value) !== -1;
+          }
+          target.hidden = !show;
+          Array.prototype.slice.call(target.querySelectorAll("input, select, textarea")).forEach(function (field) {
+            field.required = show && target.hasAttribute("data-required-when-shown");
+            if (!show && changedControl === control) {
+              if (field.type === "checkbox" || field.type === "radio") field.checked = false;
+              else field.value = "";
+            }
+          });
+        });
+      }
+
       function renderIndustryQuestions(clearChangedProfile) {
         var profile = getSelectedIndustryProfile();
         var previousProfile = form.getAttribute("data-industry-profile");
@@ -1361,7 +1948,7 @@
         }
         form.setAttribute("data-industry-profile", profile);
         root.querySelector("#up-industry-title").textContent = industryName;
-        root.querySelector("#up-industry-profile-label").textContent = "Fragenprofil: " + (industryProfileLabels[profile] || industryProfileLabels.general);
+        root.querySelector("#up-industry-profile-label").textContent = "Vertiefung · " + (industryProfileLabels[profile] || industryProfileLabels.general);
         questions.forEach(function (question, index) {
           var number = index + 1;
           root.querySelector("#industry_question_" + number).textContent = question;
@@ -1438,10 +2025,6 @@
         }
       }
 
-      function updateFinanceVisibility() {
-        financeFields.hidden = !financeToggle.checked;
-      }
-
       function showStep(index) {
         currentStep = Math.max(0, Math.min(index, steps.length - 1));
         steps.forEach(function (step, stepIndex) {
@@ -1450,7 +2033,7 @@
         var progress = currentStep === 0 ? 0 : (currentStep / (steps.length - 1)) * 100;
         progressFill.style.width = progress + "%";
         stepLabel.textContent = stepNames[currentStep];
-        stepCount.textContent = currentStep === 0 ? "Start" : (currentStep === steps.length - 1 ? "Abgeschlossen" : "Schritt " + currentStep + " von 5");
+        stepCount.textContent = currentStep === 0 ? "Start" : (currentStep === steps.length - 1 ? "Bereit zum Senden" : "Schritt " + currentStep + " von " + (steps.length - 2));
         if (currentStep === 3) renderIndustryQuestions(false);
         if (currentStep === steps.length - 1) buildReview();
         saveDraft();
@@ -1541,7 +2124,7 @@
 
       function makePlainText() {
         var data = collectData();
-        var heading = "UNTERNEHMERPFAD – VORAB-CHECK\n" +
+        var heading = "UNTERNEHMERPFAD – INTERVIEW-VORBEREITUNG\n" +
           "Erstellt am: " + new Date().toLocaleDateString("de-DE") + "\n" +
           "==================================================\n\n";
         var body = groups.map(function (group) {
@@ -1566,22 +2149,26 @@
         var sections = [
           {
             title: "1 · PERSON & UNTERNEHMEN",
-            fields: ["person_name", "role", "company", "industry", "location", "founded", "team_size", "website", "company_short"]
+            fields: ["person_name", "age_range", "role", "role_other", "company", "industry", "location", "founded", "founded_detail", "team_size", "business_stage", "customer_type", "business_model", "business_model_other", "website", "company_short"]
           },
           {
-            title: "2 · UNTERNEHMERISCHER WEG",
-            fields: ["motivation", "milestone", "difference", "challenge", "lesson", "values"]
+            title: "2 · HINTERGRUND & GRÜNDUNG",
+            fields: ["childhood_influences", "childhood_other", "education", "education_other", "career_path", "career_path_other", "founding_trigger", "founding_trigger_other", "motivation", "start_capital", "capital_detail", "capital_sources", "capital_source_other", "early_challenges", "early_challenge_other", "almost_gave_up", "milestone", "challenge"]
           },
           {
-            title: "3 · FRAGEN ZUR BRANCHE",
-            fields: ["industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"]
+            title: "3 · BRANCHENALLTAG",
+            fields: ["operational_challenge", "operational_challenge_other", "acquisition_channels", "acquisition_channel_other", "industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"]
           },
           {
-            title: "4 · INTERVIEWTHEMEN & ZAHLEN",
-            fields: ["topics", "finance_openness", "revenue_range", "start_capital", "finance_note", "focus_topic"]
+            title: "4 · GESCHÄFT HEUTE",
+            fields: ["daily_focus", "daily_focus_other", "work_rhythm", "finance_openness", "revenue_range", "finance_note", "current_progress", "current_progress_other", "difference", "biggest_success"]
           },
           {
-            title: "5 · RAHMEN & KONTAKT",
+            title: "5 · LEKTIONEN & ZIELE",
+            fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice", "topics", "focus_topic"]
+          },
+          {
+            title: "6 · RAHMEN & KONTAKT",
             fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"]
           }
         ];
@@ -1634,7 +2221,7 @@
         var url = URL.createObjectURL(blob);
         var link = document.createElement("a");
         link.href = url;
-        link.download = "unternehmerpfad-vorabcheck-" + (baseName || "antworten") + ".txt";
+        link.download = "unternehmerpfad-interview-vorbereitung-" + (baseName || "antworten") + ".txt";
         document.body.appendChild(link);
         link.click();
         link.remove();
@@ -1643,18 +2230,18 @@
       }
 
       form.addEventListener("input", function (event) {
+        updateConditionalFields(event.target);
         saveDraft();
-        updateFinanceVisibility();
         if (event.target === industryOther) renderIndustryQuestions(false);
       });
 
       form.addEventListener("change", function (event) {
-        saveDraft();
-        updateFinanceVisibility();
+        updateConditionalFields(event.target);
         if (event.target === industrySelect) {
           updateIndustryOtherVisibility();
           renderIndustryQuestions(true);
         }
+        saveDraft();
       });
 
       form.addEventListener("submit", function (event) {
@@ -1707,7 +2294,7 @@
         if (!confirmed) return;
         form.reset();
         try { localStorage.removeItem(storageKey); } catch (error) {}
-        updateFinanceVisibility();
+        updateConditionalFields();
         updateIndustryOtherVisibility();
         renderIndustryQuestions(true);
         status.textContent = "";
@@ -1715,8 +2302,9 @@
         saveState.textContent = "Neuer Entwurf";
       });
 
+      populateFoundedYears();
       restoreDraft();
-      updateFinanceVisibility();
+      updateConditionalFields();
       updateIndustryOtherVisibility();
       renderIndustryQuestions(false);
       showStep(currentStep);
