@@ -570,12 +570,12 @@
 
         <div class="up-overview" aria-label="Überblick zur Interview-Vorbereitung">
           <div class="up-overview-item">
-            <strong>10–15 Minuten</strong>
+            <strong>Ca. 8–12 Minuten</strong>
             <span class="text-small">für die Vorbereitung</span>
           </div>
           <div class="up-overview-item">
-            <strong>Freiwillige Angaben</strong>
-            <span class="text-small">Zahlen dürfen offenbleiben</span>
+            <strong>Automatisch gespeichert</strong>
+            <span class="text-small">auf diesem Gerät</span>
           </div>
           <div class="up-overview-item">
             <strong>Keine Veröffentlichung</strong>
@@ -1272,8 +1272,8 @@
           </label>
 
           <label class="up-field form-label" for="finance_openness">
-            Wie konkret können wir über Zahlen sprechen?
-            <select class="form-select" id="finance_openness" name="finance_openness">
+            Wie konkret können wir über Zahlen sprechen? <span class="up-required" aria-hidden="true">*</span>
+            <select class="form-select" id="finance_openness" name="finance_openness" required>
               <option value="">Bitte auswählen</option>
               <option>Konkrete Zahlen sind in Ordnung</option>
               <option>Nur ungefähre Spannen</option>
@@ -1441,6 +1441,21 @@
           </label>
         </div>
 
+        <div class="up-actions">
+          <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
+          <div class="up-actions-right">
+            <button class="btn btn-primary" type="button" data-next>Weiter: Gesprächsrahmen</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="up-step" data-step="6" hidden>
+        <div>
+          <p class="up-kicker text-small">Schritt 6</p>
+          <h2>Dein Gesprächsrahmen</h2>
+          <p class="text-muted">Hier siehst du die gesamte Interviewstruktur und kannst persönliche Schwerpunkte ergänzen.</p>
+        </div>
+
         <section class="up-topic-overview" aria-labelledby="up-topic-overview-title">
           <div>
             <p class="up-kicker text-small">Unsere Interviewstruktur</p>
@@ -1489,9 +1504,9 @@
         </div>
       </section>
 
-      <section class="up-step" data-step="6" hidden>
+      <section class="up-step" data-step="7" hidden>
         <div>
-          <p class="up-kicker text-small">Schritt 6</p>
+          <p class="up-kicker text-small">Schritt 7</p>
           <h2>Damit du dich wohlfühlst</h2>
           <p class="text-muted">Lege fest, was wir vor dem Gespräch berücksichtigen sollen.</p>
         </div>
@@ -1559,7 +1574,7 @@
         </div>
       </section>
 
-      <section class="up-step" data-step="7" hidden>
+      <section class="up-step" data-step="8" hidden>
         <div>
           <p class="up-kicker text-small">Fertig</p>
           <h2>Deine Vorbereitung ist komplett.</h2>
@@ -1616,7 +1631,7 @@
       var status = root.querySelector("#up-status");
       var currentStep = 0;
       var storageKey = "unternehmerpfad-vorabcheck-v3";
-      var stepNames = ["Überblick", "Person & Unternehmen", "Hintergrund & Gründung", "Branchenalltag", "Geschäft heute", "Lektionen & Ziele", "Rahmen & Kontakt", "Zusammenfassung"];
+      var stepNames = ["Überblick", "Person & Unternehmen", "Hintergrund & Gründung", "Branchenalltag", "Geschäft heute", "Lektionen & Ziele", "Gesprächsrahmen", "Rahmen & Kontakt", "Zusammenfassung"];
 
       var industryProfileLabels = {
         general: "Allgemeines Geschäftsmodell",
@@ -1912,8 +1927,9 @@
         { title: "Hintergrund & Gründung", fields: ["childhood_influences", "childhood_other", "education", "education_other", "career_path", "career_path_other", "founding_trigger", "founding_trigger_other", "motivation", "start_capital", "capital_detail", "capital_sources", "capital_source_other", "early_challenges", "early_challenge_other", "almost_gave_up", "milestone", "challenge"], step: 2 },
         { title: "Branchenalltag", fields: ["operational_challenge", "operational_challenge_other", "acquisition_channels", "acquisition_channel_other", "industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"], step: 3 },
         { title: "Geschäft heute", fields: ["daily_focus", "daily_focus_other", "work_rhythm", "finance_openness", "revenue_range", "finance_note", "current_progress", "current_progress_other", "difference", "biggest_success"], step: 4 },
-        { title: "Lektionen & Ziele", fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice", "topics", "focus_topic"], step: 5 },
-        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 6 }
+        { title: "Lektionen & Ziele", fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice"], step: 5 },
+        { title: "Gesprächsrahmen", fields: ["topics", "focus_topic"], step: 6 },
+        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 7 }
       ];
 
       function getSelectedIndustryName() {
@@ -2222,10 +2238,14 @@
           },
           {
             title: "5 · LEKTIONEN & ZIELE",
-            fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice", "topics", "focus_topic"]
+            fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice"]
           },
           {
-            title: "6 · RAHMEN & KONTAKT",
+            title: "6 · GESPRÄCHSRAHMEN",
+            fields: ["topics", "focus_topic"]
+          },
+          {
+            title: "7 · RAHMEN & KONTAKT",
             fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"]
           }
         ];
