@@ -564,9 +564,9 @@
       <input type="hidden" name="_autoresponse" value="Vielen Dank für deine Antworten. Unternehmerpfad hat deine Interview-Vorbereitung erhalten und meldet sich bei dir.">
       <div id="up-email-fields" hidden></div>
       <section class="up-step" data-step="0">
-        <p class="up-kicker text-small">Vorbereitung auf dein Gespräch</p>
+        <p class="up-kicker text-small">Vorbereitung für Unternehmerpfad</p>
         <h2>Dein Weg steht im Mittelpunkt.</h2>
-        <p>Mit dieser Vorbereitung lernen wir dich, deinen Weg und dein Unternehmen besser kennen. Gleichzeitig weißt du schon vor dem Gespräch, welche Themen auf dich zukommen können. Du musst nichts auswendig lernen.</p>
+        <p>Mit den folgenden Fragen lernen wir dich, deinen Weg und dein Unternehmen besser kennen. Kurze Antworten oder Stichpunkte reichen vollkommen.</p>
 
         <div class="up-overview" aria-label="Überblick zur Interview-Vorbereitung">
           <div class="up-overview-item">
@@ -578,17 +578,17 @@
             <span class="text-small">auf diesem Gerät</span>
           </div>
           <div class="up-overview-item">
-            <strong>Keine Veröffentlichung</strong>
-            <span class="text-small">durch diesen Fragebogen</span>
+            <strong>Direkt übermittelt</strong>
+            <span class="text-small">an Unternehmerpfad</span>
           </div>
         </div>
 
         <div class="up-callout">
-          <h3>So läuft es ab</h3>
+          <h3>Darum geht es</h3>
           <ol class="up-flow-list">
-            <li>Du beantwortest nur die Punkte, die du teilen möchtest.</li>
-            <li>Das persönliche oder digitale Interview dauert etwa 45–90 Minuten.</li>
-            <li>Vor der Veröffentlichung erhältst du das fertige Interview zur Freigabe.</li>
+            <li>Dein persönlicher und beruflicher Weg.</li>
+            <li>Die Gründung und der Alltag in deiner Branche.</li>
+            <li>Zahlen, Entscheidungen, Fehler und nächste Ziele.</li>
           </ol>
         </div>
 
@@ -1112,7 +1112,6 @@
               <option>Ja</option>
               <option>Mehrmals</option>
               <option>Nein</option>
-              <option>Darüber möchte ich lieber im Gespräch sprechen</option>
             </select>
           </label>
 
@@ -1122,14 +1121,14 @@
           </label>
 
           <label class="up-field form-label up-span-2" for="challenge">
-            Möchtest du eine schwierige Phase kurz einordnen?
-            <textarea class="form-control" id="challenge" name="challenge" rows="3" placeholder="Was ist passiert – und was hat dir geholfen? Freiwillig."></textarea>
+            Welche schwierige Phase hat dich bisher am meisten geprägt?
+            <textarea class="form-control" id="challenge" name="challenge" rows="3" placeholder="Was ist passiert – und was hat dir geholfen?"></textarea>
           </label>
         </div>
 
         <div class="up-preview">
-          <strong>Im Interview gehen wir bei den interessantesten Punkten tiefer.</strong>
-          <span class="text-small">Du musst hier keine fertigen Geschichten formulieren. Gute Stichpunkte reichen für die Vorbereitung.</span>
+          <strong>Stichpunkte reichen.</strong>
+          <span class="text-small">Uns helfen vor allem konkrete Beispiele, Zahlen und wichtige Wendepunkte.</span>
         </div>
 
         <div class="up-actions">
@@ -1144,12 +1143,12 @@
         <div>
           <p class="up-kicker text-small">Schritt 3 · Branchenschwerpunkt</p>
           <h2><span id="up-industry-title">Deine Branche</span> im Alltag</h2>
-          <p class="text-muted">Wir haben für deine Branche passende Vertiefungen vorbereitet. Zwei kurze Antworten reichen, alles Weitere ist freiwillig.</p>
+          <p class="text-muted">Für deine Branche erscheinen automatisch passende Vertiefungen. Zwei kurze Antworten reichen, alles Weitere ist freiwillig.</p>
         </div>
 
         <div class="up-preview">
           <strong id="up-industry-profile-label">Ausgewählte Branchenfragen</strong>
-          <span class="text-small">Antworte gern knapp. Details klären wir gemeinsam im Gespräch.</span>
+          <span class="text-small">Antworte gern knapp und nenne, wenn möglich, ein konkretes Beispiel oder eine Zahl.</span>
         </div>
 
         <div class="up-grid">
@@ -1271,21 +1270,11 @@
             </select>
           </label>
 
-          <label class="up-field form-label" for="finance_openness">
-            Wie konkret können wir über Zahlen sprechen? <span class="up-required" aria-hidden="true">*</span>
-            <select class="form-select" id="finance_openness" name="finance_openness" required>
-              <option value="">Bitte auswählen</option>
-              <option>Konkrete Zahlen sind in Ordnung</option>
-              <option>Nur ungefähre Spannen</option>
-              <option>Nur allgemeine Einordnung</option>
-            </select>
-            <span class="text-small text-muted">Finanzielle Einblicke gehören zum Gespräch. Hier legst du nur fest, wie genau wir Zahlen nennen können.</span>
-          </label>
-
           <label class="up-field form-label" for="revenue_range">
-            Jahresumsatz – freiwillig
-            <select class="form-select" id="revenue_range" name="revenue_range">
-              <option value="">Im Interview einordnen</option>
+            In welcher Größenordnung liegt euer Jahresumsatz? <span class="up-required" aria-hidden="true">*</span>
+            <select class="form-select" id="revenue_range" name="revenue_range" required>
+              <option value="">Bitte auswählen</option>
+              <option>Noch keine Umsätze</option>
               <option>Unter 100.000 € pro Jahr</option>
               <option>100.000–250.000 € pro Jahr</option>
               <option>250.000–500.000 € pro Jahr</option>
@@ -1345,7 +1334,7 @@
         <div>
           <p class="up-kicker text-small">Schritt 5</p>
           <h2>Lektionen und nächste Ziele</h2>
-          <p class="text-muted">Hier entstehen meistens die persönlichsten und wertvollsten Teile des Interviews.</p>
+          <p class="text-muted">Hier geht es um Erfahrungen, Fehlentscheidungen, Motivation und die nächsten Schritte.</p>
         </div>
 
         <div class="up-grid">
@@ -1444,7 +1433,7 @@
         <div class="up-actions">
           <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
           <div class="up-actions-right">
-            <button class="btn btn-primary" type="button" data-next>Weiter: Gesprächsrahmen</button>
+            <button class="btn btn-primary" type="button" data-next>Weiter: Zahlen & Entscheidungen</button>
           </div>
         </div>
       </section>
@@ -1452,54 +1441,76 @@
       <section class="up-step" data-step="6" hidden>
         <div>
           <p class="up-kicker text-small">Schritt 6</p>
-          <h2>Dein Gesprächsrahmen</h2>
-          <p class="text-muted">Hier siehst du die gesamte Interviewstruktur und kannst persönliche Schwerpunkte ergänzen.</p>
+          <h2>Zahlen, Entscheidungen und Einblicke</h2>
+          <p class="text-muted">Konkrete Einblicke helfen uns, dein Unternehmen wirklich zu verstehen.</p>
         </div>
 
-        <section class="up-topic-overview" aria-labelledby="up-topic-overview-title">
-          <div>
-            <p class="up-kicker text-small">Unsere Interviewstruktur</p>
-            <h3 id="up-topic-overview-title">Darüber kann es im Gespräch gehen</h3>
-            <p class="text-small text-muted">Die Reihenfolge ist flexibel. Deine Auswahl darunter setzt nur persönliche Schwerpunkte – kein Thema wird ausgeschlossen.</p>
-          </div>
-          <ol class="up-topic-structure">
-            <li><span class="up-topic-number">01</span><span class="up-topic-copy"><strong>Person, Kindheit & Herkunft</strong><span>Wer du bist und was dich früh geprägt hat</span></span></li>
-            <li><span class="up-topic-number">02</span><span class="up-topic-copy"><strong>Schule, Ausbildung & beruflicher Weg</strong><span>Stationen und Wendepunkte vor dem Unternehmertum</span></span></li>
-            <li><span class="up-topic-number">03</span><span class="up-topic-copy"><strong>Idee, Gründung & Umsetzung</strong><span>Auslöser, erste Schritte und wichtige Entscheidungen</span></span></li>
-            <li><span class="up-topic-number">04</span><span class="up-topic-copy"><strong>Startkapital & Finanzierung</strong><span>Kapitalbedarf und Wege der Finanzierung</span></span></li>
-            <li><span class="up-topic-number">05</span><span class="up-topic-copy"><strong>Herausforderungen & Rückschläge</strong><span>Schwierige Phasen, Zweifel und der Umgang damit</span></span></li>
-            <li><span class="up-topic-number">06</span><span class="up-topic-copy"><strong>Alltag, Team & Geschäftsmodell</strong><span>Aufgaben, Mitarbeitende und wie das Unternehmen Geld verdient</span></span></li>
-            <li><span class="up-topic-number">07</span><span class="up-topic-copy"><strong>Branche, Kunden & Marketing</strong><span>Besonderheiten, Kundengewinnung und operative Themen</span></span></li>
-            <li><span class="up-topic-number">08</span><span class="up-topic-copy"><strong>Umsatz, Kosten & Kennzahlen</strong><span>Wirtschaftliche Einblicke und wichtige Zahlen</span></span></li>
-            <li><span class="up-topic-number">09</span><span class="up-topic-copy"><strong>Erfolge, Fehler & Lektionen</strong><span>Meilensteine, Fehlentscheidungen und Erkenntnisse</span></span></li>
-            <li><span class="up-topic-number">10</span><span class="up-topic-copy"><strong>Motivation, Ziele & Rat</strong><span>Antrieb, die nächsten 12 Monate und Tipps für Gründer</span></span></li>
-          </ol>
-        </section>
+        <div class="up-grid">
+          <label class="up-field form-label" for="profit_margin">
+            Welche Gewinnmarge erreicht ihr ungefähr?
+            <select class="form-select" id="profit_margin" name="profit_margin">
+              <option value="">Bitte auswählen</option>
+              <option>Noch nicht profitabel</option>
+              <option>Unter 5 %</option>
+              <option>5–10 %</option>
+              <option>10–20 %</option>
+              <option>20–30 %</option>
+              <option>Mehr als 30 %</option>
+              <option>Stark schwankend / schwer vergleichbar</option>
+            </select>
+          </label>
 
-        <fieldset class="up-choice-section" id="up-topic-grid">
-          <legend>Welche Bereiche sind dir persönlich besonders wichtig?</legend>
-          <span class="up-choice-hint">Diese Auswahl setzt nur Schwerpunkte. Grundsätzlich kann es um alle oben genannten Themen gehen.</span>
-          <div class="up-choice-grid">
-            <label class="up-choice-chip" for="topic_start"><input id="topic_start" name="topics" type="checkbox" value="Gründung und Motivation"> Gründung & Motivation</label>
-            <label class="up-choice-chip" for="topic_daily"><input id="topic_daily" name="topics" type="checkbox" value="Alltag und Routinen"> Alltag & Routinen</label>
-            <label class="up-choice-chip" for="topic_challenges"><input id="topic_challenges" name="topics" type="checkbox" value="Herausforderungen und Rückschläge"> Herausforderungen</label>
-            <label class="up-choice-chip" for="topic_finance"><input id="topic_finance" name="topics" type="checkbox" value="Finanzen und Kennzahlen"> Finanzen & Kennzahlen</label>
-            <label class="up-choice-chip" for="topic_team"><input id="topic_team" name="topics" type="checkbox" value="Team und Führung"> Team & Führung</label>
-            <label class="up-choice-chip" for="topic_growth"><input id="topic_growth" name="topics" type="checkbox" value="Wachstum und Strategie"> Wachstum & Strategie</label>
-            <label class="up-choice-chip" for="topic_personal"><input id="topic_personal" name="topics" type="checkbox" value="Persönlichkeit und Mindset"> Persönlichkeit & Haltung</label>
-            <label class="up-choice-chip" for="topic_future"><input id="topic_future" name="topics" type="checkbox" value="Ziele und Zukunft"> Ziele & Zukunft</label>
-          </div>
-        </fieldset>
+          <label class="up-field form-label" for="biggest_cost">
+            Was ist euer größter Kostenblock?
+            <select class="form-select" id="biggest_cost" name="biggest_cost">
+              <option value="">Bitte auswählen</option>
+              <option>Personal</option>
+              <option>Wareneinsatz / Material</option>
+              <option>Miete / Standort</option>
+              <option>Fahrzeuge / Logistik</option>
+              <option>Marketing / Vertrieb</option>
+              <option>Software / Technik</option>
+              <option>Finanzierung / Zinsen</option>
+              <option>Steuern / Abgaben</option>
+              <option>Anderer Kostenblock</option>
+            </select>
+          </label>
 
-        <label class="up-field form-label" for="focus_topic">
-          Gibt es ein Thema, eine Geschichte oder eine Frage, die du selbst einbringen möchtest?
-          <textarea class="form-control" id="focus_topic" name="focus_topic" rows="3" placeholder="Alles, was dir für das Gespräch noch wichtig ist …"></textarea>
-        </label>
+          <label class="up-field form-label" for="break_even">
+            Welcher Monatsumsatz ist ungefähr nötig, damit sich das Geschäft trägt?
+            <input class="form-control" id="break_even" name="break_even" type="text" placeholder="Betrag, Spanne oder kurze Einordnung">
+          </label>
+
+          <label class="up-field form-label" for="surprising_number">
+            Welche Zahl aus eurem Unternehmen würde Außenstehende überraschen?
+            <input class="form-control" id="surprising_number" name="surprising_number" type="text" placeholder="z. B. Kosten, Aufträge, Auslastung oder Warenwert">
+          </label>
+
+          <label class="up-field form-label up-span-2" for="key_decision">
+            Welche Entscheidung hat dein Unternehmen bisher am stärksten verändert?
+            <textarea class="form-control" id="key_decision" name="key_decision" rows="3" placeholder="Was wurde entschieden – und was hat sich dadurch verändert?"></textarea>
+          </label>
+
+          <label class="up-field form-label" for="expensive_mistake">
+            Was war dein bisher teuerster Fehler?
+            <textarea class="form-control" id="expensive_mistake" name="expensive_mistake" rows="3" placeholder="Finanziell, zeitlich oder persönlich"></textarea>
+          </label>
+
+          <label class="up-field form-label" for="next_investment">
+            Worin möchtest du als Nächstes investieren?
+            <textarea class="form-control" id="next_investment" name="next_investment" rows="3" placeholder="Team, Standort, Technik, Marketing oder etwas anderes"></textarea>
+          </label>
+
+          <label class="up-field form-label up-span-2" for="industry_misconception">
+            Was verstehen Außenstehende über deine Branche meistens falsch?
+            <textarea class="form-control" id="industry_misconception" name="industry_misconception" rows="3" placeholder="Ein Vorurteil, eine falsche Annahme oder eine unterschätzte Herausforderung"></textarea>
+          </label>
+        </div>
 
         <div class="up-actions">
           <button class="btn btn-ghost" type="button" data-prev>Zurück</button>
           <div class="up-actions-right">
-            <button class="btn btn-primary" type="button" data-next>Weiter: Rahmen klären</button>
+            <button class="btn btn-primary" type="button" data-next>Weiter: Kontakt</button>
           </div>
         </div>
       </section>
@@ -1507,34 +1518,11 @@
       <section class="up-step" data-step="7" hidden>
         <div>
           <p class="up-kicker text-small">Schritt 7</p>
-          <h2>Damit du dich wohlfühlst</h2>
-          <p class="text-muted">Lege fest, was wir vor dem Gespräch berücksichtigen sollen.</p>
+          <h2>Kontakt und Abschluss</h2>
+          <p class="text-muted">Damit wir deine Antworten zuordnen und uns bei dir melden können.</p>
         </div>
 
         <div class="up-grid">
-          <label class="up-field form-label" for="recording">
-            Bevorzugte Gesprächsform
-            <select class="form-select" id="recording" name="recording">
-              <option value="">Noch offen</option>
-              <option>Persönlich vor Ort</option>
-              <option>Digital per Video</option>
-              <option>Nur Ton / Podcast</option>
-              <option>Erst im Vorgespräch entscheiden</option>
-            </select>
-          </label>
-
-          <label class="up-field form-label" for="preferred_contact">
-            Bevorzugter Kontaktweg
-            <select class="form-select" id="preferred_contact" name="preferred_contact">
-              <option value="">Bitte auswählen</option>
-              <option>Instagram</option>
-              <option>E-Mail</option>
-              <option>Telefon / WhatsApp</option>
-              <option>LinkedIn</option>
-              <option>Andere Kontaktmöglichkeit</option>
-            </select>
-          </label>
-
           <label class="up-field form-label" for="participant_email">
             Deine E-Mail-Adresse <span class="up-required" aria-hidden="true">*</span>
             <input class="form-control" id="participant_email" name="_replyto" type="email" autocomplete="email" required placeholder="name@unternehmen.de">
@@ -1544,26 +1532,11 @@
             Telefon oder Social Media – freiwillig
             <input class="form-control" id="contact" name="contact" type="text" placeholder="Telefonnummer oder @Nutzername">
           </label>
-
-          <label class="up-field form-label" for="no_go">
-            Gibt es No-Go-Themen?
-            <textarea class="form-control" id="no_go" name="no_go" rows="4" placeholder="Themen, Namen oder Angaben, die wir nicht ansprechen sollen."></textarea>
-          </label>
-
-          <label class="up-field form-label" for="check_again">
-            Was möchtest du vor Veröffentlichung noch einmal prüfen?
-            <textarea class="form-control" id="check_again" name="check_again" rows="4" placeholder="z. B. konkrete Zahlen, Namen oder sensible Aussagen"></textarea>
-          </label>
-
-          <label class="up-field form-label up-span-2" for="own_question">
-            Gibt es noch etwas Organisatorisches, das wir vorab wissen sollten?
-            <textarea class="form-control" id="own_question" name="own_question" rows="3" placeholder="Zum Ablauf, Termin oder zur Vorbereitung …"></textarea>
-          </label>
         </div>
 
         <div class="form-check">
           <input class="form-check-input" id="confirm_preparation" name="confirm_preparation" type="checkbox" required>
-          <label class="form-check-label" for="confirm_preparation">Ich habe verstanden, dass meine Angaben über den Formular-Dienst FormSubmit an Unternehmerpfad@gmail.com übermittelt werden, nur der Interviewvorbereitung dienen und noch keine Veröffentlichung freigeben. <span class="up-required" aria-hidden="true">*</span></label>
+          <label class="form-check-label" for="confirm_preparation">Ich stimme zu, dass meine Angaben über FormSubmit an Unternehmerpfad@gmail.com übermittelt und zur Kontaktaufnahme sowie Vorbereitung verwendet werden. <span class="up-required" aria-hidden="true">*</span></label>
         </div>
 
         <div class="up-actions">
@@ -1577,13 +1550,8 @@
       <section class="up-step" data-step="8" hidden>
         <div>
           <p class="up-kicker text-small">Fertig</p>
-          <h2>Deine Vorbereitung ist komplett.</h2>
-          <p>Prüfe die Zusammenfassung und sende sie anschließend direkt an Unternehmerpfad. Du erhältst eine Bestätigung an deine angegebene E-Mail-Adresse.</p>
-        </div>
-
-        <div class="up-preview" aria-labelledby="up-preparation-title">
-          <strong id="up-preparation-title">Darauf kannst du dich im Gespräch einstellen</strong>
-          <ul class="up-question-list" id="up-tailored-questions"></ul>
+          <h2>Deine Angaben sind komplett.</h2>
+          <p>Prüfe die Zusammenfassung und sende sie anschließend direkt an Unternehmerpfad.</p>
         </div>
 
         <div class="up-review" id="up-review" aria-label="Zusammenfassung der Antworten"></div>
@@ -1627,11 +1595,10 @@
       var industryOtherWrap = root.querySelector("#up-industry-other-wrap");
       var foundedSelect = root.querySelector("#founded");
       var review = root.querySelector("#up-review");
-      var tailoredQuestions = root.querySelector("#up-tailored-questions");
       var status = root.querySelector("#up-status");
       var currentStep = 0;
       var storageKey = "unternehmerpfad-vorabcheck-v3";
-      var stepNames = ["Überblick", "Person & Unternehmen", "Hintergrund & Gründung", "Branchenalltag", "Geschäft heute", "Lektionen & Ziele", "Gesprächsrahmen", "Rahmen & Kontakt", "Zusammenfassung"];
+      var stepNames = ["Überblick", "Person & Unternehmen", "Hintergrund & Gründung", "Branchenalltag", "Geschäft heute", "Lektionen & Ziele", "Zahlen & Entscheidungen", "Kontakt", "Zusammenfassung"];
 
       var industryProfileLabels = {
         general: "Allgemeines Geschäftsmodell",
@@ -1894,7 +1861,6 @@
         daily_focus: "Schwerpunkte im Arbeitsalltag",
         daily_focus_other: "Andere Hauptaufgabe",
         work_rhythm: "Arbeitsrhythmus",
-        finance_openness: "Genauigkeit bei finanziellen Angaben",
         revenue_range: "Jahresumsatz",
         finance_note: "Hinweis zu Zahlen",
         current_progress: "Aktuell positive Entwicklungen",
@@ -1911,25 +1877,26 @@
         goals_12m: "Ziele für die nächsten 12 Monate",
         goals_12m_other: "Anderes 12-Monats-Ziel",
         founder_advice: "Rat an junge Gründer/innen",
-        topics: "Persönlich wichtige Schwerpunkte",
-        focus_topic: "Eigene Frage / eigenes Thema",
-        recording: "Gesprächsform",
-        preferred_contact: "Kontaktweg",
+        profit_margin: "Ungefähre Gewinnmarge",
+        biggest_cost: "Größter Kostenblock",
+        break_even: "Nötiger Monatsumsatz",
+        surprising_number: "Überraschende Unternehmenszahl",
+        key_decision: "Prägendste unternehmerische Entscheidung",
+        expensive_mistake: "Teuerster Fehler",
+        next_investment: "Nächste Investition",
+        industry_misconception: "Häufiges Missverständnis über die Branche",
         _replyto: "E-Mail-Adresse",
-        contact: "Kontaktdaten",
-        no_go: "No-Go-Themen",
-        check_again: "Vor Veröffentlichung prüfen",
-        own_question: "Organisatorische Hinweise"
+        contact: "Weitere Kontaktdaten"
       };
 
       var groups = [
         { title: "Person & Unternehmen", fields: ["person_name", "age_range", "role", "role_other", "company", "industry", "location", "founded", "founded_detail", "team_size", "business_stage", "customer_type", "business_model", "business_model_other", "website", "company_short"], step: 1 },
         { title: "Hintergrund & Gründung", fields: ["childhood_influences", "childhood_other", "education", "education_other", "career_path", "career_path_other", "founding_trigger", "founding_trigger_other", "motivation", "start_capital", "capital_detail", "capital_sources", "capital_source_other", "early_challenges", "early_challenge_other", "almost_gave_up", "milestone", "challenge"], step: 2 },
         { title: "Branchenalltag", fields: ["operational_challenge", "operational_challenge_other", "acquisition_channels", "acquisition_channel_other", "industry_answer_1", "industry_answer_2", "industry_answer_3", "industry_answer_4", "industry_answer_5"], step: 3 },
-        { title: "Geschäft heute", fields: ["daily_focus", "daily_focus_other", "work_rhythm", "finance_openness", "revenue_range", "finance_note", "current_progress", "current_progress_other", "difference", "biggest_success"], step: 4 },
+        { title: "Geschäft heute", fields: ["daily_focus", "daily_focus_other", "work_rhythm", "revenue_range", "finance_note", "current_progress", "current_progress_other", "difference", "biggest_success"], step: 4 },
         { title: "Lektionen & Ziele", fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice"], step: 5 },
-        { title: "Gesprächsrahmen", fields: ["topics", "focus_topic"], step: 6 },
-        { title: "Rahmen & Kontakt", fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"], step: 7 }
+        { title: "Zahlen & Entscheidungen", fields: ["profit_margin", "biggest_cost", "break_even", "surprising_number", "key_decision", "expensive_mistake", "next_investment", "industry_misconception"], step: 6 },
+        { title: "Kontakt", fields: ["_replyto", "contact"], step: 7 }
       ];
 
       function getSelectedIndustryName() {
@@ -2157,32 +2124,6 @@
         return lines.length ? lines.join("\n\n") : "Keine Angaben";
       }
 
-      function buildQuestions(data) {
-        var selected = data.topics ? data.topics.split(", ") : [];
-        var pool = [
-          { topic: "Gründung und Motivation", text: "Wie ist aus deiner ersten Idee ein echtes Unternehmen geworden?" },
-          { topic: "Alltag und Routinen", text: "Wie sieht ein typischer Arbeitstag aus – und was daran überrascht andere?" },
-          { topic: "Herausforderungen und Rückschläge", text: "Welche schwierige Phase hat dich als Unternehmer am stärksten verändert?" },
-          { topic: "Finanzen und Kennzahlen", text: "Welche wirtschaftliche Kennzahl beschreibt dein Geschäft am verständlichsten?" },
-          { topic: "Team und Führung", text: "Was erwartest du von deinem Team – und was darf dein Team von dir erwarten?" },
-          { topic: "Wachstum und Strategie", text: "Welche Entscheidung ist für den nächsten Wachstumsschritt besonders wichtig?" },
-          { topic: "Persönlichkeit und Mindset", text: "Wie gehst du mit Druck, Unsicherheit und Verantwortung um?" },
-          { topic: "Ziele und Zukunft", text: "Wo soll dein Unternehmen in drei Jahren stehen?" }
-        ];
-        var chosen = pool.filter(function (item) { return selected.indexOf(item.topic) !== -1; }).map(function (item) { return item.text; });
-        if (!chosen.length) {
-          chosen = [
-            "Wie hat dein unternehmerischer Weg begonnen?",
-            "Was war bisher deine wichtigste Entscheidung?",
-            "Welche Lektion möchtest du anderen mitgeben?"
-          ];
-        }
-        var branchQuestion = getIndustryQuestions()[0];
-        if (branchQuestion) chosen.unshift(branchQuestion);
-        chosen = chosen.filter(function (question, index, all) { return all.indexOf(question) === index; }).slice(0, 5);
-        tailoredQuestions.innerHTML = chosen.map(function (question) { return "<li>" + escapeText(question) + "</li>"; }).join("");
-      }
-
       function buildReview() {
         var data = collectData();
         review.innerHTML = groups.map(function (group) {
@@ -2192,18 +2133,17 @@
             "<div class=\"up-review-content text-small\">" + escapeText(groupText(group, data)) + "</div>" +
             "</section>";
         }).join("");
-        buildQuestions(data);
       }
 
       function makePlainText() {
         var data = collectData();
-        var heading = "UNTERNEHMERPFAD – INTERVIEW-VORBEREITUNG\n" +
+        var heading = "UNTERNEHMERPFAD – UNTERNEHMER-FRAGEBOGEN\n" +
           "Erstellt am: " + new Date().toLocaleDateString("de-DE") + "\n" +
           "==================================================\n\n";
         var body = groups.map(function (group) {
           return group.title.toUpperCase() + "\n" + groupText(group, data);
         }).join("\n\n--------------------------------------------------\n\n");
-        return heading + body + "\n\nHinweis: Diese Angaben dienen der Interviewvorbereitung und stellen keine Veröffentlichungsfreigabe dar.";
+        return heading + body + "\n\nHinweis: Diese Angaben dienen der Vorbereitung und Kontaktaufnahme durch Unternehmerpfad.";
       }
 
       function addEmailRow(container, name, value) {
@@ -2234,19 +2174,19 @@
           },
           {
             title: "4 · GESCHÄFT HEUTE",
-            fields: ["daily_focus", "daily_focus_other", "work_rhythm", "finance_openness", "revenue_range", "finance_note", "current_progress", "current_progress_other", "difference", "biggest_success"]
+            fields: ["daily_focus", "daily_focus_other", "work_rhythm", "revenue_range", "finance_note", "current_progress", "current_progress_other", "difference", "biggest_success"]
           },
           {
             title: "5 · LEKTIONEN & ZIELE",
             fields: ["lesson_topics", "lesson_other", "lesson", "mistakes", "mistakes_other", "motivation_drivers", "motivation_driver_other", "goals_12m", "goals_12m_other", "founder_advice"]
           },
           {
-            title: "6 · GESPRÄCHSRAHMEN",
-            fields: ["topics", "focus_topic"]
+            title: "6 · ZAHLEN & ENTSCHEIDUNGEN",
+            fields: ["profit_margin", "biggest_cost", "break_even", "surprising_number", "key_decision", "expensive_mistake", "next_investment", "industry_misconception"]
           },
           {
-            title: "7 · RAHMEN & KONTAKT",
-            fields: ["recording", "preferred_contact", "_replyto", "contact", "no_go", "check_again", "own_question"]
+            title: "7 · KONTAKT",
+            fields: ["_replyto", "contact"]
           }
         ];
 
@@ -2257,7 +2197,7 @@
             if (data[name]) addEmailRow(container, getFieldLabel(name), data[name]);
           });
         });
-        addEmailRow(container, "Hinweis", "Die Angaben dienen der Interviewvorbereitung und sind noch keine Veröffentlichungsfreigabe.");
+        addEmailRow(container, "Hinweis", "Die Angaben dienen der Vorbereitung und Kontaktaufnahme durch Unternehmerpfad.");
       }
 
       function copyText() {
